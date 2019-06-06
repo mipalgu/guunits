@@ -61,6 +61,11 @@
 
 #include <stdint.h>
 
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 // Time units.
 typedef int seconds_t;
 typedef int milliseconds_t;
@@ -94,5 +99,9 @@ metres_t millimetres_to_metres(millimetres_t millimetres);
 centimetres_t metres_to_centimetres(metres_t metres);
 millimetres_t centimetres_to_millimetres(centimetres_t centimetres);
 millimetres_t metres_to_millimetres(metres_t metres);
+
+#ifdef __cplusplus
+};
+#endif
 
 #endif  /* UNITS_H */
