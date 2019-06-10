@@ -9,6 +9,7 @@ C_SRCS!=ls *.c
 CC_SRCS!=ls *.cc
 ALL_HDRS!=ls *.h
 
+.include "../../mk/c++17.mk"
 .include "../../mk/mipal.mk"
 
 # vim:ft=make
