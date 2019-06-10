@@ -74,28 +74,17 @@ struct VisionController
 
     public:
 
-        VisionController()
-        {
-            this->_fetchCoordinate = []() { return Coordinate(0, 0); };
-            this->_hasNewCoordinate = []() { return false; };
-            this->_update = [](){};
-        }
+        VisionController();
 
         VisionController(
-                std::function<Coordinate()> fetchCoordinate,
-                std::function<bool()> hasNewCoordinate,
-                std::function<void()> update
-            ): _fetchCoordinate(fetchCoordinate), _hasNewCoordinate(hasNewCoordinate), _update(update) {}
+            std::function<Coordinate()> fetchCoordinate,
+            std::function<bool()> hasNewCoordinate,
+            std::function<void()> update
+        );
 
-        VisionGateway createGateway()
-        {
-            return VisionGateway(this->_fetchCoordinate, this->_hasNewCoordinate);
-        }
+        VisionGateway createGateway();
 
-        void update()
-        {
-            this->_update();
-        }
+        void update();
 
 };
 

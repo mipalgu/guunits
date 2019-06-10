@@ -1,8 +1,8 @@
 /*
- * VisionGateway.h 
- * Vision 
+ * VisionGateway.cc 
+ * guunits 
  *
- * Created by Callum McColl on 08/06/2019.
+ * Created by Callum McColl on 10/06/2019.
  * Copyright © 2019 Callum McColl. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -56,29 +56,25 @@
  *
  */
 
-#ifndef VISIONGATEWAY_H
-#define VISIONGATEWAY_H
+#include "VisionGateway.h"
 
-#include <stdbool.h>
-#include <functional>
-#include "Coordinate.h"
+VisionGateway::VisionGateway()
+{
+    this->_fetchCoordinate = []() { return Coordinate(0, 0); };
+    this->_hasNewCoordinate = []() { return false; };
+}
 
-struct VisionGateway {
+VisionGateway::VisionGateway(
+        std::function<Coordinate()> fetchCoordinate,
+        std::function<bool()> hasNewCoordinate
+    ): _fetchCoordinate(fetchCoordinate), _hasNewCoordinate(hasNewCoordinate) {}
 
-    private:
-        std::function<Coordinate()> _fetchCoordinate;
-        std::function<bool()> _hasNewCoordinate;
+Coordinate VisionGateway::fetchCoordinate()
+{
+    return this->_fetchCoordinate();
+}
 
-    public:
-
-        VisionGateway();
-
-        VisionGateway(std::function<Coordinate()> fetchCoordinate, std::function<bool()> hasNewCoordinate);
-
-        Coordinate fetchCoordinate();
-
-        bool hasNewCoordinate();
-
-};
-
-#endif  /* VISIONGATEWAY_H */
+bool VisionGateway::hasNewCoordinate()
+{
+    return _hasNewCoordinate();
+}

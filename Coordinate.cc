@@ -1,8 +1,8 @@
 /*
- * VisionGateway.h 
- * Vision 
+ * Coordinate.cc 
+ * guunits 
  *
- * Created by Callum McColl on 08/06/2019.
+ * Created by Callum McColl on 10/06/2019.
  * Copyright © 2019 Callum McColl. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -56,29 +56,10 @@
  *
  */
 
-#ifndef VISIONGATEWAY_H
-#define VISIONGATEWAY_H
-
-#include <stdbool.h>
-#include <functional>
 #include "Coordinate.h"
 
-struct VisionGateway {
+Coordinate::Coordinate(): _direction(0), _distance(0) {}
 
-    private:
-        std::function<Coordinate()> _fetchCoordinate;
-        std::function<bool()> _hasNewCoordinate;
+Coordinate::Coordinate(degrees_t direction, distance_t distance): _direction(direction), _distance(distance) {}
 
-    public:
 
-        VisionGateway();
-
-        VisionGateway(std::function<Coordinate()> fetchCoordinate, std::function<bool()> hasNewCoordinate);
-
-        Coordinate fetchCoordinate();
-
-        bool hasNewCoordinate();
-
-};
-
-#endif  /* VISIONGATEWAY_H */
