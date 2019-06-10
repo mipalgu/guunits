@@ -71,10 +71,15 @@ VisionGateway::VisionGateway(
 
 Coordinate VisionGateway::fetchCoordinate()
 {
-    return this->_fetchCoordinate();
+    return this->cachedCoordinate;
 }
 
 bool VisionGateway::hasNewCoordinate()
 {
-    return _hasNewCoordinate();
+    if (!this->_hasNewCoordinate())
+    {
+        return false;
+    }
+    this->cachedCoordinate = this->_fetchCoordinate();
+    return true;
 }

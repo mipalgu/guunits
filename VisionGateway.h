@@ -68,6 +68,7 @@ struct VisionGateway {
     private:
         std::function<Coordinate()> _fetchCoordinate;
         std::function<bool()> _hasNewCoordinate;
+        Coordinate cachedCoordinate;
 
     public:
 
