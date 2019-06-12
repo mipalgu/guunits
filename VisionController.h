@@ -68,18 +68,18 @@ struct VisionController
 {
 
     private:
-        std::function<Coordinate()> * _fetchCoordinate;
-        std::function<bool()> * _hasNewCoordinate;
-        std::function<void()> * _update;
+        std::function<Coordinate()> _fetchCoordinate;
+        std::function<bool()> _hasNewCoordinate;
+        std::function<void()> _update;
 
     public:
 
         VisionController();
 
         VisionController(
-            std::function<Coordinate()> * fetchCoordinate,
-            std::function<bool()> * hasNewCoordinate,
-            std::function<void()> * update
+            std::function<Coordinate()> fetchCoordinate,
+            std::function<bool()> hasNewCoordinate,
+            std::function<void()> update
         );
 
         VisionGateway createGateway();

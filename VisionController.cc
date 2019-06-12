@@ -68,22 +68,22 @@ VisionController::VisionController()
 }
 
 VisionController::VisionController(
-    std::function<Coordinate()> * fetchCoordinate,
-    std::function<bool()> * hasNewCoordinate,
-    std::function<void()> * update
+    std::function<Coordinate()> fetchCoordinate,
+    std::function<bool()> hasNewCoordinate,
+    std::function<void()> update
 ): _fetchCoordinate(fetchCoordinate), _hasNewCoordinate(hasNewCoordinate), _update(update) {
-    std::cout << "Has new coordinate constructor: " << (*_hasNewCoordinate)() << std::endl;
+    std::cout << "Has new coordinate constructor: " << _hasNewCoordinate() << std::endl;
 }
 
 VisionGateway VisionController::createGateway()
 {
     std::cout << "createGateway1" << std::endl;
-    std::cout << "Has Coordinate: " << (*this->_hasNewCoordinate)() << std::endl;
-    return VisionGateway(*this->_fetchCoordinate, *this->_hasNewCoordinate);
+    std::cout << "Has Coordinate: " << this->_hasNewCoordinate() << std::endl;
+    return VisionGateway(this->_fetchCoordinate, this->_hasNewCoordinate);
 }
 
 void VisionController::update()
 {
-    (*this->_update)();
+    this->_update();
 }
 
