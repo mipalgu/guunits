@@ -9,7 +9,7 @@ C_SRCS!=ls *.c
 CC_SRCS!=ls *.cc
 ALL_HDRS!=ls *.h
 
-.include "../../mk/prefs.mk"
+.include "../../mk/c++17.mk"
 
 ${MODULE_BASE}_HDRS=${ALL_HDRS}
 PKGCONFIG_NAME=guunits
