@@ -16,6 +16,10 @@ PKGCONFIG_NAME=guunits
 PKGCONFIG_VERSION=1.0
 PKGCONFIG_DESCRIPTION=Simple units library.
 
+generate:
+	cd guunits_generator && swift build
+	./guunits_generator/.build/debug/guunits_generator
+
 
 .include "../../mk/mipal.mk"
 
