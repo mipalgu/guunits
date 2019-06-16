@@ -60,7 +60,6 @@
 #ifndef GUUNITS_H
 #define GUUNITS_H
 
-#include <math.h>
 #include <stdint.h>
 #include <limits.h>
 
