@@ -62,15 +62,13 @@
 #include <gu_util.h>
 #include "guunits.h"
 
-typedef centimetres_t distance_t; // centimetres.
-
 struct Coordinate {
 
     PROPERTY(degrees_t, direction)
-    PROPERTY(distance_t, distance)
+    PROPERTY(centimetres_u, distance)
 
     Coordinate();
-    Coordinate(degrees_t direction, distance_t distance);
+    Coordinate(degrees_t direction, centimetres_u distance);
 
 };
 
