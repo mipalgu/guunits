@@ -1836,7 +1836,7 @@ radians_f deg_d_to_rad_f(degrees_d degrees)
  */
 radians_t deg_d_to_rad_t(degrees_d degrees)
 {
-    return ((radians_t) (((double) degrees) * M_PI / 180.0));
+    return ((radians_t) (round(((double) degrees) * M_PI / 180.0)));
 }
 
 /**
@@ -1844,7 +1844,7 @@ radians_t deg_d_to_rad_t(degrees_d degrees)
  */
 radians_u deg_d_to_rad_u(degrees_d degrees)
 {
-    return ((radians_u) (((double) degrees) * M_PI / 180.0));
+    return ((radians_u) (round(((double) degrees) * M_PI / 180.0)));
 }
 
 /**
@@ -1884,7 +1884,7 @@ radians_d deg_f_to_rad_d(degrees_f degrees)
  */
 radians_t deg_f_to_rad_t(degrees_f degrees)
 {
-    return ((radians_t) (((double) degrees) * M_PI / 180.0));
+    return ((radians_t) (round(((double) degrees) * M_PI / 180.0)));
 }
 
 /**
@@ -1892,7 +1892,7 @@ radians_t deg_f_to_rad_t(degrees_f degrees)
  */
 radians_u deg_f_to_rad_u(degrees_f degrees)
 {
-    return ((radians_u) (((double) degrees) * M_PI / 180.0));
+    return ((radians_u) (round(((double) degrees) * M_PI / 180.0)));
 }
 
 /**
@@ -2004,7 +2004,7 @@ degrees_f rad_d_to_deg_f(radians_d radians)
  */
 degrees_t rad_d_to_deg_t(radians_d radians)
 {
-    return ((degrees_t) (180.0 / M_PI * ((double) radians)));
+    return ((degrees_t) (round(180.0 / M_PI * ((double) radians))));
 }
 
 /**
@@ -2012,7 +2012,7 @@ degrees_t rad_d_to_deg_t(radians_d radians)
  */
 degrees_u rad_d_to_deg_u(radians_d radians)
 {
-    return ((degrees_u) (180.0 / M_PI * ((double) radians)));
+    return ((degrees_u) (round(180.0 / M_PI * ((double) radians))));
 }
 
 /**
@@ -2052,7 +2052,7 @@ degrees_d rad_f_to_deg_d(radians_f radians)
  */
 degrees_t rad_f_to_deg_t(radians_f radians)
 {
-    return ((degrees_t) (180.0 / M_PI * ((double) radians)));
+    return ((degrees_t) (round(180.0 / M_PI * ((double) radians))));
 }
 
 /**
@@ -2060,7 +2060,7 @@ degrees_t rad_f_to_deg_t(radians_f radians)
  */
 degrees_u rad_f_to_deg_u(radians_f radians)
 {
-    return ((degrees_u) (180.0 / M_PI * ((double) radians)));
+    return ((degrees_u) (round(180.0 / M_PI * ((double) radians))));
 }
 
 /**
