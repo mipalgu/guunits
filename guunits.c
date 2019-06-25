@@ -149,6 +149,14 @@ int8_t cm_d_to_i8(centimetres_d centimetres)
 }
 
 /**
+ * Convert centimetres_d to metres_d.
+ */
+metres_d cm_d_to_m_d(centimetres_d centimetres)
+{
+    return ((metres_d) (round(((double) (((centimetres_d) (round(((double) (centimetres))))) / 100.0)))));
+}
+
+/**
  * Convert centimetres_d to metres_f.
  */
 metres_f cm_d_to_m_f(centimetres_d centimetres)
@@ -170,6 +178,14 @@ metres_t cm_d_to_m_t(centimetres_d centimetres)
 metres_u cm_d_to_m_u(centimetres_d centimetres)
 {
     return ((metres_u) (round(((double) (((centimetres_d) (round(((double) (centimetres))))) / 100.0)))));
+}
+
+/**
+ * Convert centimetres_d to millimetres_d.
+ */
+millimetres_d cm_d_to_mm_d(centimetres_d centimetres)
+{
+    return ((millimetres_d) (round(((double) (centimetres * 10.0)))));
 }
 
 /**
@@ -325,6 +341,14 @@ metres_d cm_f_to_m_d(centimetres_f centimetres)
 }
 
 /**
+ * Convert centimetres_f to metres_f.
+ */
+metres_f cm_f_to_m_f(centimetres_f centimetres)
+{
+    return ((metres_f) (((centimetres_d) (centimetres)) / 100.0));
+}
+
+/**
  * Convert centimetres_f to metres_t.
  */
 metres_t cm_f_to_m_t(centimetres_f centimetres)
@@ -346,6 +370,14 @@ metres_u cm_f_to_m_u(centimetres_f centimetres)
 millimetres_d cm_f_to_mm_d(centimetres_f centimetres)
 {
     return ((millimetres_d) (centimetres * 10.0f));
+}
+
+/**
+ * Convert centimetres_f to millimetres_f.
+ */
+millimetres_f cm_f_to_mm_f(centimetres_f centimetres)
+{
+    return ((millimetres_f) (round(((double) (centimetres * 10.0f)))));
 }
 
 /**
@@ -501,6 +533,14 @@ metres_f cm_t_to_m_f(centimetres_t centimetres)
 }
 
 /**
+ * Convert centimetres_t to metres_t.
+ */
+metres_t cm_t_to_m_t(centimetres_t centimetres)
+{
+    return ((metres_t) (round(((double) (((centimetres_d) (centimetres)) / 100.0)))));
+}
+
+/**
  * Convert centimetres_t to metres_u.
  */
 metres_u cm_t_to_m_u(centimetres_t centimetres)
@@ -522,6 +562,14 @@ millimetres_d cm_t_to_mm_d(centimetres_t centimetres)
 millimetres_f cm_t_to_mm_f(centimetres_t centimetres)
 {
     return ((millimetres_f) (centimetres * 10));
+}
+
+/**
+ * Convert centimetres_t to millimetres_t.
+ */
+millimetres_t cm_t_to_mm_t(centimetres_t centimetres)
+{
+    return ((millimetres_t) (round(((double) (centimetres * 10)))));
 }
 
 /**
@@ -677,6 +725,14 @@ metres_t cm_u_to_m_t(centimetres_u centimetres)
 }
 
 /**
+ * Convert centimetres_u to metres_u.
+ */
+metres_u cm_u_to_m_u(centimetres_u centimetres)
+{
+    return ((metres_u) (round(((double) (((centimetres_d) (centimetres)) / 100.0)))));
+}
+
+/**
  * Convert centimetres_u to millimetres_d.
  */
 millimetres_d cm_u_to_mm_d(centimetres_u centimetres)
@@ -698,6 +754,14 @@ millimetres_f cm_u_to_mm_f(centimetres_u centimetres)
 millimetres_t cm_u_to_mm_t(centimetres_u centimetres)
 {
     return ((millimetres_t) ((centimetres * 10) > ((unsigned int) (INT_MAX)) ? ((unsigned int) (INT_MAX)) : centimetres * 10));
+}
+
+/**
+ * Convert centimetres_u to millimetres_u.
+ */
+millimetres_u cm_u_to_mm_u(centimetres_u centimetres)
+{
+    return ((millimetres_u) (round(((double) (centimetres * 10)))));
 }
 
 /**
@@ -1413,6 +1477,14 @@ millimetres_u i_to_mm_u(int millimetres)
 }
 
 /**
+ * Convert metres_d to centimetres_d.
+ */
+centimetres_d m_d_to_cm_d(metres_d metres)
+{
+    return ((centimetres_d) (round(((double) (metres * 100.0)))));
+}
+
+/**
  * Convert metres_d to centimetres_f.
  */
 centimetres_f m_d_to_cm_f(metres_d metres)
@@ -1517,6 +1589,14 @@ metres_u m_d_to_m_u(metres_d metres)
 }
 
 /**
+ * Convert metres_d to millimetres_d.
+ */
+millimetres_d m_d_to_mm_d(metres_d metres)
+{
+    return ((millimetres_d) (round(((double) (metres * 1000.0)))));
+}
+
+/**
  * Convert metres_d to millimetres_f.
  */
 millimetres_f m_d_to_mm_f(metres_d metres)
@@ -1586,6 +1666,14 @@ unsigned int m_d_to_u(metres_d metres)
 centimetres_d m_f_to_cm_d(metres_f metres)
 {
     return ((centimetres_d) (metres * 100.0f));
+}
+
+/**
+ * Convert metres_f to centimetres_f.
+ */
+centimetres_f m_f_to_cm_f(metres_f metres)
+{
+    return ((centimetres_f) (round(((double) (metres * 100.0f)))));
 }
 
 /**
@@ -1693,6 +1781,14 @@ millimetres_d m_f_to_mm_d(metres_f metres)
 }
 
 /**
+ * Convert metres_f to millimetres_f.
+ */
+millimetres_f m_f_to_mm_f(metres_f metres)
+{
+    return ((millimetres_f) (round(((double) (metres * 1000.0f)))));
+}
+
+/**
  * Convert metres_f to millimetres_t.
  */
 millimetres_t m_f_to_mm_t(metres_f metres)
@@ -1762,6 +1858,14 @@ centimetres_d m_t_to_cm_d(metres_t metres)
 centimetres_f m_t_to_cm_f(metres_t metres)
 {
     return ((centimetres_f) (metres * 100));
+}
+
+/**
+ * Convert metres_t to centimetres_t.
+ */
+centimetres_t m_t_to_cm_t(metres_t metres)
+{
+    return ((centimetres_t) (round(((double) (metres * 100)))));
 }
 
 /**
@@ -1869,6 +1973,14 @@ millimetres_f m_t_to_mm_f(metres_t metres)
 }
 
 /**
+ * Convert metres_t to millimetres_t.
+ */
+millimetres_t m_t_to_mm_t(metres_t metres)
+{
+    return ((millimetres_t) (round(((double) (metres * 1000)))));
+}
+
+/**
  * Convert metres_t to millimetres_u.
  */
 millimetres_u m_t_to_mm_u(metres_t metres)
@@ -1938,6 +2050,14 @@ centimetres_f m_u_to_cm_f(metres_u metres)
 centimetres_t m_u_to_cm_t(metres_u metres)
 {
     return ((centimetres_t) ((metres * 100) > ((unsigned int) (INT_MAX)) ? ((unsigned int) (INT_MAX)) : metres * 100));
+}
+
+/**
+ * Convert metres_u to centimetres_u.
+ */
+centimetres_u m_u_to_cm_u(metres_u metres)
+{
+    return ((centimetres_u) (round(((double) (metres * 100)))));
 }
 
 /**
@@ -2045,6 +2165,14 @@ millimetres_t m_u_to_mm_t(metres_u metres)
 }
 
 /**
+ * Convert metres_u to millimetres_u.
+ */
+millimetres_u m_u_to_mm_u(metres_u metres)
+{
+    return ((millimetres_u) (round(((double) (metres * 1000)))));
+}
+
+/**
  * Convert metres_u to uint16_t.
  */
 uint16_t m_u_to_u16(metres_u metres)
@@ -2082,6 +2210,14 @@ uint8_t m_u_to_u8(metres_u metres)
 unsigned int m_u_to_u(metres_u metres)
 {
     return ((unsigned int) (metres));
+}
+
+/**
+ * Convert millimetres_d to centimetres_d.
+ */
+centimetres_d mm_d_to_cm_d(millimetres_d millimetres)
+{
+    return ((centimetres_d) (round(((double) (((millimetres_d) (round(((double) (millimetres))))) / 10.0)))));
 }
 
 /**
@@ -2162,6 +2298,14 @@ int64_t mm_d_to_i64(millimetres_d millimetres)
 int8_t mm_d_to_i8(millimetres_d millimetres)
 {
     return ((int8_t) (((millimetres_d) (round(millimetres)))));
+}
+
+/**
+ * Convert millimetres_d to metres_d.
+ */
+metres_d mm_d_to_m_d(millimetres_d millimetres)
+{
+    return ((metres_d) (round(((double) (((millimetres_d) (round(((double) (millimetres))))) / 1000.0)))));
 }
 
 /**
@@ -2261,6 +2405,14 @@ centimetres_d mm_f_to_cm_d(millimetres_f millimetres)
 }
 
 /**
+ * Convert millimetres_f to centimetres_f.
+ */
+centimetres_f mm_f_to_cm_f(millimetres_f millimetres)
+{
+    return ((centimetres_f) (((millimetres_d) (millimetres)) / 10.0));
+}
+
+/**
  * Convert millimetres_f to centimetres_t.
  */
 centimetres_t mm_f_to_cm_t(millimetres_f millimetres)
@@ -2338,6 +2490,14 @@ int8_t mm_f_to_i8(millimetres_f millimetres)
 metres_d mm_f_to_m_d(millimetres_f millimetres)
 {
     return ((metres_d) (round(((double) (((millimetres_d) (millimetres)) / 1000.0)))));
+}
+
+/**
+ * Convert millimetres_f to metres_f.
+ */
+metres_f mm_f_to_m_f(millimetres_f millimetres)
+{
+    return ((metres_f) (((millimetres_d) (millimetres)) / 1000.0));
 }
 
 /**
@@ -2437,6 +2597,14 @@ centimetres_f mm_t_to_cm_f(millimetres_t millimetres)
 }
 
 /**
+ * Convert millimetres_t to centimetres_t.
+ */
+centimetres_t mm_t_to_cm_t(millimetres_t millimetres)
+{
+    return ((centimetres_t) (round(((double) (((millimetres_d) (millimetres)) / 10.0)))));
+}
+
+/**
  * Convert millimetres_t to centimetres_u.
  */
 centimetres_u mm_t_to_cm_u(millimetres_t millimetres)
@@ -2514,6 +2682,14 @@ metres_d mm_t_to_m_d(millimetres_t millimetres)
 metres_f mm_t_to_m_f(millimetres_t millimetres)
 {
     return ((metres_f) (((millimetres_d) (millimetres)) / 1000.0));
+}
+
+/**
+ * Convert millimetres_t to metres_t.
+ */
+metres_t mm_t_to_m_t(millimetres_t millimetres)
+{
+    return ((metres_t) (round(((double) (((millimetres_d) (millimetres)) / 1000.0)))));
 }
 
 /**
@@ -2613,6 +2789,14 @@ centimetres_t mm_u_to_cm_t(millimetres_u millimetres)
 }
 
 /**
+ * Convert millimetres_u to centimetres_u.
+ */
+centimetres_u mm_u_to_cm_u(millimetres_u millimetres)
+{
+    return ((centimetres_u) (round(((double) (((millimetres_d) (millimetres)) / 10.0)))));
+}
+
+/**
  * Convert millimetres_u to double.
  */
 double mm_u_to_d(millimetres_u millimetres)
@@ -2690,6 +2874,14 @@ metres_f mm_u_to_m_f(millimetres_u millimetres)
 metres_t mm_u_to_m_t(millimetres_u millimetres)
 {
     return ((metres_t) (round(((double) (((millimetres_d) (millimetres)) / 1000.0)))));
+}
+
+/**
+ * Convert millimetres_u to metres_u.
+ */
+metres_u mm_u_to_m_u(millimetres_u millimetres)
+{
+    return ((metres_u) (round(((double) (((millimetres_d) (millimetres)) / 1000.0)))));
 }
 
 /**
@@ -3991,6 +4183,14 @@ microseconds_u us_d_to_us_u(microseconds_d microseconds)
 }
 
 /**
+ * Convert microseconds_d to milliseconds_d.
+ */
+milliseconds_d us_d_to_ms_d(microseconds_d microseconds)
+{
+    return ((milliseconds_d) (round(((double) (((microseconds_d) (round(((double) (microseconds))))) / 1000.0)))));
+}
+
+/**
  * Convert microseconds_d to milliseconds_f.
  */
 milliseconds_f us_d_to_ms_f(microseconds_d microseconds)
@@ -4012,6 +4212,14 @@ milliseconds_t us_d_to_ms_t(microseconds_d microseconds)
 milliseconds_u us_d_to_ms_u(microseconds_d microseconds)
 {
     return ((milliseconds_u) (round(((double) (((microseconds_d) (round(((double) (microseconds))))) / 1000.0)))));
+}
+
+/**
+ * Convert microseconds_d to seconds_d.
+ */
+seconds_d us_d_to_s_d(microseconds_d microseconds)
+{
+    return ((seconds_d) (round(((double) (((microseconds_d) (round(((double) (microseconds))))) / 1000000.0)))));
 }
 
 /**
@@ -4167,6 +4375,14 @@ milliseconds_d us_f_to_ms_d(microseconds_f microseconds)
 }
 
 /**
+ * Convert microseconds_f to milliseconds_f.
+ */
+milliseconds_f us_f_to_ms_f(microseconds_f microseconds)
+{
+    return ((milliseconds_f) (((microseconds_d) (microseconds)) / 1000.0));
+}
+
+/**
  * Convert microseconds_f to milliseconds_t.
  */
 milliseconds_t us_f_to_ms_t(microseconds_f microseconds)
@@ -4188,6 +4404,14 @@ milliseconds_u us_f_to_ms_u(microseconds_f microseconds)
 seconds_d us_f_to_s_d(microseconds_f microseconds)
 {
     return ((seconds_d) (round(((double) (((microseconds_d) (microseconds)) / 1000000.0)))));
+}
+
+/**
+ * Convert microseconds_f to seconds_f.
+ */
+seconds_f us_f_to_s_f(microseconds_f microseconds)
+{
+    return ((seconds_f) (((microseconds_d) (microseconds)) / 1000000.0));
 }
 
 /**
@@ -4343,6 +4567,14 @@ milliseconds_f us_t_to_ms_f(microseconds_t microseconds)
 }
 
 /**
+ * Convert microseconds_t to milliseconds_t.
+ */
+milliseconds_t us_t_to_ms_t(microseconds_t microseconds)
+{
+    return ((milliseconds_t) (round(((double) (((microseconds_d) (microseconds)) / 1000.0)))));
+}
+
+/**
  * Convert microseconds_t to milliseconds_u.
  */
 milliseconds_u us_t_to_ms_u(microseconds_t microseconds)
@@ -4364,6 +4596,14 @@ seconds_d us_t_to_s_d(microseconds_t microseconds)
 seconds_f us_t_to_s_f(microseconds_t microseconds)
 {
     return ((seconds_f) (((microseconds_d) (microseconds)) / 1000000.0));
+}
+
+/**
+ * Convert microseconds_t to seconds_t.
+ */
+seconds_t us_t_to_s_t(microseconds_t microseconds)
+{
+    return ((seconds_t) (round(((double) (((microseconds_d) (microseconds)) / 1000000.0)))));
 }
 
 /**
@@ -4519,6 +4759,14 @@ milliseconds_t us_u_to_ms_t(microseconds_u microseconds)
 }
 
 /**
+ * Convert microseconds_u to milliseconds_u.
+ */
+milliseconds_u us_u_to_ms_u(microseconds_u microseconds)
+{
+    return ((milliseconds_u) (round(((double) (((microseconds_d) (microseconds)) / 1000.0)))));
+}
+
+/**
  * Convert microseconds_u to seconds_d.
  */
 seconds_d us_u_to_s_d(microseconds_u microseconds)
@@ -4540,6 +4788,14 @@ seconds_f us_u_to_s_f(microseconds_u microseconds)
 seconds_t us_u_to_s_t(microseconds_u microseconds)
 {
     return ((seconds_t) (round(((double) (((microseconds_d) (microseconds)) / 1000000.0)))));
+}
+
+/**
+ * Convert microseconds_u to seconds_u.
+ */
+seconds_u us_u_to_s_u(microseconds_u microseconds)
+{
+    return ((seconds_u) (round(((double) (((microseconds_d) (microseconds)) / 1000000.0)))));
 }
 
 /**
@@ -4639,6 +4895,14 @@ int8_t ms_d_to_i8(milliseconds_d milliseconds)
 }
 
 /**
+ * Convert milliseconds_d to microseconds_d.
+ */
+microseconds_d ms_d_to_us_d(milliseconds_d milliseconds)
+{
+    return ((microseconds_d) (round(((double) (milliseconds * 1000.0)))));
+}
+
+/**
  * Convert milliseconds_d to microseconds_f.
  */
 microseconds_f ms_d_to_us_f(milliseconds_d milliseconds)
@@ -4684,6 +4948,14 @@ milliseconds_t ms_d_to_ms_t(milliseconds_d milliseconds)
 milliseconds_u ms_d_to_ms_u(milliseconds_d milliseconds)
 {
     return ((milliseconds_u) (round(((double) (milliseconds)))));
+}
+
+/**
+ * Convert milliseconds_d to seconds_d.
+ */
+seconds_d ms_d_to_s_d(milliseconds_d milliseconds)
+{
+    return ((seconds_d) (round(((double) (((milliseconds_d) (round(((double) (milliseconds))))) / 1000.0)))));
 }
 
 /**
@@ -4815,6 +5087,14 @@ microseconds_d ms_f_to_us_d(milliseconds_f milliseconds)
 }
 
 /**
+ * Convert milliseconds_f to microseconds_f.
+ */
+microseconds_f ms_f_to_us_f(milliseconds_f milliseconds)
+{
+    return ((microseconds_f) (round(((double) (milliseconds * 1000.0f)))));
+}
+
+/**
  * Convert milliseconds_f to microseconds_t.
  */
 microseconds_t ms_f_to_us_t(milliseconds_f milliseconds)
@@ -4860,6 +5140,14 @@ milliseconds_u ms_f_to_ms_u(milliseconds_f milliseconds)
 seconds_d ms_f_to_s_d(milliseconds_f milliseconds)
 {
     return ((seconds_d) (round(((double) (((milliseconds_d) (milliseconds)) / 1000.0)))));
+}
+
+/**
+ * Convert milliseconds_f to seconds_f.
+ */
+seconds_f ms_f_to_s_f(milliseconds_f milliseconds)
+{
+    return ((seconds_f) (((milliseconds_d) (milliseconds)) / 1000.0));
 }
 
 /**
@@ -4991,6 +5279,14 @@ microseconds_f ms_t_to_us_f(milliseconds_t milliseconds)
 }
 
 /**
+ * Convert milliseconds_t to microseconds_t.
+ */
+microseconds_t ms_t_to_us_t(milliseconds_t milliseconds)
+{
+    return ((microseconds_t) (round(((double) (milliseconds * 1000)))));
+}
+
+/**
  * Convert milliseconds_t to microseconds_u.
  */
 microseconds_u ms_t_to_us_u(milliseconds_t milliseconds)
@@ -5036,6 +5332,14 @@ seconds_d ms_t_to_s_d(milliseconds_t milliseconds)
 seconds_f ms_t_to_s_f(milliseconds_t milliseconds)
 {
     return ((seconds_f) (((milliseconds_d) (milliseconds)) / 1000.0));
+}
+
+/**
+ * Convert milliseconds_t to seconds_t.
+ */
+seconds_t ms_t_to_s_t(milliseconds_t milliseconds)
+{
+    return ((seconds_t) (round(((double) (((milliseconds_d) (milliseconds)) / 1000.0)))));
 }
 
 /**
@@ -5167,6 +5471,14 @@ microseconds_t ms_u_to_us_t(milliseconds_u milliseconds)
 }
 
 /**
+ * Convert milliseconds_u to microseconds_u.
+ */
+microseconds_u ms_u_to_us_u(milliseconds_u milliseconds)
+{
+    return ((microseconds_u) (round(((double) (milliseconds * 1000)))));
+}
+
+/**
  * Convert milliseconds_u to milliseconds_d.
  */
 milliseconds_d ms_u_to_ms_d(milliseconds_u milliseconds)
@@ -5212,6 +5524,14 @@ seconds_f ms_u_to_s_f(milliseconds_u milliseconds)
 seconds_t ms_u_to_s_t(milliseconds_u milliseconds)
 {
     return ((seconds_t) (round(((double) (((milliseconds_d) (milliseconds)) / 1000.0)))));
+}
+
+/**
+ * Convert milliseconds_u to seconds_u.
+ */
+seconds_u ms_u_to_s_u(milliseconds_u milliseconds)
+{
+    return ((seconds_u) (round(((double) (((milliseconds_d) (milliseconds)) / 1000.0)))));
 }
 
 /**
@@ -5311,6 +5631,14 @@ int8_t s_d_to_i8(seconds_d seconds)
 }
 
 /**
+ * Convert seconds_d to microseconds_d.
+ */
+microseconds_d s_d_to_us_d(seconds_d seconds)
+{
+    return ((microseconds_d) (round(((double) (seconds * 1000000.0)))));
+}
+
+/**
  * Convert seconds_d to microseconds_f.
  */
 microseconds_f s_d_to_us_f(seconds_d seconds)
@@ -5332,6 +5660,14 @@ microseconds_t s_d_to_us_t(seconds_d seconds)
 microseconds_u s_d_to_us_u(seconds_d seconds)
 {
     return ((microseconds_u) (round(((double) (seconds * 1000000.0)))));
+}
+
+/**
+ * Convert seconds_d to milliseconds_d.
+ */
+milliseconds_d s_d_to_ms_d(seconds_d seconds)
+{
+    return ((milliseconds_d) (round(((double) (seconds * 1000.0)))));
 }
 
 /**
@@ -5487,6 +5823,14 @@ microseconds_d s_f_to_us_d(seconds_f seconds)
 }
 
 /**
+ * Convert seconds_f to microseconds_f.
+ */
+microseconds_f s_f_to_us_f(seconds_f seconds)
+{
+    return ((microseconds_f) (round(((double) (seconds * 1000000.0f)))));
+}
+
+/**
  * Convert seconds_f to microseconds_t.
  */
 microseconds_t s_f_to_us_t(seconds_f seconds)
@@ -5508,6 +5852,14 @@ microseconds_u s_f_to_us_u(seconds_f seconds)
 milliseconds_d s_f_to_ms_d(seconds_f seconds)
 {
     return ((milliseconds_d) (seconds * 1000.0f));
+}
+
+/**
+ * Convert seconds_f to milliseconds_f.
+ */
+milliseconds_f s_f_to_ms_f(seconds_f seconds)
+{
+    return ((milliseconds_f) (round(((double) (seconds * 1000.0f)))));
 }
 
 /**
@@ -5663,6 +6015,14 @@ microseconds_f s_t_to_us_f(seconds_t seconds)
 }
 
 /**
+ * Convert seconds_t to microseconds_t.
+ */
+microseconds_t s_t_to_us_t(seconds_t seconds)
+{
+    return ((microseconds_t) (round(((double) (seconds * 1000000)))));
+}
+
+/**
  * Convert seconds_t to microseconds_u.
  */
 microseconds_u s_t_to_us_u(seconds_t seconds)
@@ -5684,6 +6044,14 @@ milliseconds_d s_t_to_ms_d(seconds_t seconds)
 milliseconds_f s_t_to_ms_f(seconds_t seconds)
 {
     return ((milliseconds_f) (seconds * 1000));
+}
+
+/**
+ * Convert seconds_t to milliseconds_t.
+ */
+milliseconds_t s_t_to_ms_t(seconds_t seconds)
+{
+    return ((milliseconds_t) (round(((double) (seconds * 1000)))));
 }
 
 /**
@@ -5839,6 +6207,14 @@ microseconds_t s_u_to_us_t(seconds_u seconds)
 }
 
 /**
+ * Convert seconds_u to microseconds_u.
+ */
+microseconds_u s_u_to_us_u(seconds_u seconds)
+{
+    return ((microseconds_u) (round(((double) (seconds * 1000000)))));
+}
+
+/**
  * Convert seconds_u to milliseconds_d.
  */
 milliseconds_d s_u_to_ms_d(seconds_u seconds)
@@ -5860,6 +6236,14 @@ milliseconds_f s_u_to_ms_f(seconds_u seconds)
 milliseconds_t s_u_to_ms_t(seconds_u seconds)
 {
     return ((milliseconds_t) ((seconds * 1000) > ((unsigned int) (INT_MAX)) ? ((unsigned int) (INT_MAX)) : seconds * 1000));
+}
+
+/**
+ * Convert seconds_u to milliseconds_u.
+ */
+milliseconds_u s_u_to_ms_u(seconds_u seconds)
+{
+    return ((milliseconds_u) (round(((double) (seconds * 1000)))));
 }
 
 /**
@@ -6489,6 +6873,14 @@ int8_t deg_d_to_i8(degrees_d degrees)
 }
 
 /**
+ * Convert degrees_d to radians_d.
+ */
+radians_d deg_d_to_rad_d(degrees_d degrees)
+{
+    return ((radians_d) (((double) degrees) * M_PI / 180.0));
+}
+
+/**
  * Convert degrees_d to radians_f.
  */
 radians_f deg_d_to_rad_f(degrees_d degrees)
@@ -6638,6 +7030,14 @@ int8_t deg_f_to_i8(degrees_f degrees)
 radians_d deg_f_to_rad_d(degrees_f degrees)
 {
     return ((radians_d) (((double) degrees) * M_PI / 180.0));
+}
+
+/**
+ * Convert degrees_f to radians_f.
+ */
+radians_f deg_f_to_rad_f(degrees_f degrees)
+{
+    return ((radians_f) (((double) degrees) * M_PI / 180.0));
 }
 
 /**
@@ -6793,6 +7193,14 @@ radians_f deg_t_to_rad_f(degrees_t degrees)
 }
 
 /**
+ * Convert degrees_t to radians_t.
+ */
+radians_t deg_t_to_rad_t(degrees_t degrees)
+{
+    return ((radians_t) (((double) degrees) * M_PI / 180.0));
+}
+
+/**
  * Convert degrees_t to radians_u.
  */
 radians_u deg_t_to_rad_u(degrees_t degrees)
@@ -6942,6 +7350,14 @@ radians_f deg_u_to_rad_f(degrees_u degrees)
 radians_t deg_u_to_rad_t(degrees_u degrees)
 {
     return ((radians_t) (((double) degrees) * M_PI / 180.0));
+}
+
+/**
+ * Convert degrees_u to radians_u.
+ */
+radians_u deg_u_to_rad_u(degrees_u degrees)
+{
+    return ((radians_u) (((double) degrees) * M_PI / 180.0));
 }
 
 /**
@@ -7433,6 +7849,14 @@ radians_u i_to_rad_u(int radians)
 }
 
 /**
+ * Convert radians_d to degrees_d.
+ */
+degrees_d rad_d_to_deg_d(radians_d radians)
+{
+    return ((degrees_d) (180.0 / M_PI * ((double) radians)));
+}
+
+/**
  * Convert radians_d to degrees_f.
  */
 degrees_f rad_d_to_deg_f(radians_d radians)
@@ -7582,6 +8006,14 @@ unsigned int rad_d_to_u(radians_d radians)
 degrees_d rad_f_to_deg_d(radians_f radians)
 {
     return ((degrees_d) (180.0 / M_PI * ((double) radians)));
+}
+
+/**
+ * Convert radians_f to degrees_f.
+ */
+degrees_f rad_f_to_deg_f(radians_f radians)
+{
+    return ((degrees_f) (180.0 / M_PI * ((double) radians)));
 }
 
 /**
@@ -7737,6 +8169,14 @@ degrees_f rad_t_to_deg_f(radians_t radians)
 }
 
 /**
+ * Convert radians_t to degrees_t.
+ */
+degrees_t rad_t_to_deg_t(radians_t radians)
+{
+    return ((degrees_t) (180.0 / M_PI * ((double) radians)));
+}
+
+/**
  * Convert radians_t to degrees_u.
  */
 degrees_u rad_t_to_deg_u(radians_t radians)
@@ -7886,6 +8326,14 @@ degrees_f rad_u_to_deg_f(radians_u radians)
 degrees_t rad_u_to_deg_t(radians_u radians)
 {
     return ((degrees_t) (180.0 / M_PI * ((double) radians)));
+}
+
+/**
+ * Convert radians_u to degrees_u.
+ */
+degrees_u rad_u_to_deg_u(radians_u radians)
+{
+    return ((degrees_u) (180.0 / M_PI * ((double) radians)));
 }
 
 /**
