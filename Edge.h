@@ -64,8 +64,8 @@
 
 struct Edge {
 
-    PROPERTY(Coordinate, leftPoint)
-    PROPERTY(Coordinate, rightPoint)
+    PROPERTY(struct Coordinate, leftPoint)
+    PROPERTY(struct Coordinate, rightPoint)
 
 #ifdef __cplusplus
     Edge();

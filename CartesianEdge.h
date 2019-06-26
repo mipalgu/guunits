@@ -65,8 +65,8 @@
 struct CartesianEdge
 {
 
-    PROPERTY(CartesianCoordinate, leftPoint)
-    PROPERTY(CartesianCoordinate, rightPoint)
+    PROPERTY(struct CartesianCoordinate, leftPoint)
+    PROPERTY(struct CartesianCoordinate, rightPoint)
 
 #ifdef __cplusplus
     CartesianEdge();
