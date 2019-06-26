@@ -60,16 +60,17 @@
 #define CARTESIANCOORDINATE_H
 
 #include <gu_util.h>
+#include "guunits.h"
 
 struct CartesianCoordinate
 {
 
-    PROPERTY(int, x)
-    PROPERTY(int, y)
+    PROPERTY(centimetres_t, x)
+    PROPERTY(centimetres_t, y)
 
 #ifdef __cplusplus
     CartesianCoordinate();
-    CartesianCoordinate(int x, int y);
+    CartesianCoordinate(centimetres_t x, centimetres_t y);
 #endif
 
 };
