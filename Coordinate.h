@@ -67,8 +67,10 @@ struct Coordinate {
     PROPERTY(degrees_t, direction)
     PROPERTY(centimetres_u, distance)
 
+#ifdef __cplusplus
     Coordinate();
     Coordinate(degrees_t direction, centimetres_u distance);
+#endif
 
 };
 

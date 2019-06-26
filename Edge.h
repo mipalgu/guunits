@@ -67,9 +67,10 @@ struct Edge {
     PROPERTY(Coordinate, leftPoint)
     PROPERTY(Coordinate, rightPoint)
 
+#ifdef __cplusplus
     Edge();
-
     Edge(Coordinate leftPoint, Coordinate rightPoint);
+#endif
 
 };
 
