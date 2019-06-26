@@ -58,6 +58,14 @@
 
 #include "CartesianCoordinate.h"
 
-CartesianCoordinate::CartesianCoordinate(): _x(0), _y(0) {}
+CartesianCoordinate::CartesianCoordinate()
+{
+    this->_x = 0;
+    this->_y = 0;
+}
 
-CartesianCoordinate::CartesianCoordinate(centimetres_t x, centimetres_t y): _x(x), _y(y) {}
+CartesianCoordinate::CartesianCoordinate(centimetres_t x, centimetres_t y)
+{
+    this->_x = x;
+    this->_y = y;
+}

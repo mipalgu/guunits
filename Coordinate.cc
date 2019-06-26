@@ -58,8 +58,16 @@
 
 #include "Coordinate.h"
 
-Coordinate::Coordinate(): _direction(0), _distance(0) {}
+Coordinate::Coordinate()
+{
+    this->_direction = 0;
+    this->_distance = 0;
+}
 
-Coordinate::Coordinate(degrees_t direction, centimetres_u distance): _direction(direction), _distance(distance) {}
+Coordinate::Coordinate(degrees_t direction, centimetres_u distance)
+{
+    this->_direction = direction;
+    this->_distance = distance;
+}
 
 

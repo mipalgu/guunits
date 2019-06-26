@@ -58,6 +58,14 @@
 
 #include "CartesianEdge.h"
 
-CartesianEdge::CartesianEdge(): _leftPoint(CartesianCoordinate()), _rightPoint(CartesianCoordinate()) {}
+CartesianEdge::CartesianEdge()
+{
+    this->_leftPoint = CartesianCoordinate();
+    this->_rightPoint = CartesianCoordinate();
+}
 
-CartesianEdge::CartesianEdge(CartesianCoordinate leftPoint, CartesianCoordinate rightPoint): _leftPoint(leftPoint), _rightPoint(rightPoint) {}
+CartesianEdge::CartesianEdge(CartesianCoordinate leftPoint, CartesianCoordinate rightPoint)
+{
+    this->_leftPoint = leftPoint;
+    this->_rightPoint = rightPoint;
+}

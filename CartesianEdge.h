@@ -68,8 +68,8 @@ extern "C" {
 
 typedef struct cartesian_edge
 {
-    PROPERTY(struct CartesianCoordinate, leftPoint)
-    PROPERTY(struct CartesianCoordinate, rightPoint)
+    PROPERTY(struct cartesian_coordinate, leftPoint)
+    PROPERTY(struct cartesian_coordinate, rightPoint)
 } cartesian_edge;
 
 #ifdef __cplusplus

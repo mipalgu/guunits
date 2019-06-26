@@ -59,8 +59,8 @@
 #ifndef EDGE_H
 #define EDGE_H
 
-#include "Coordinate.h"
 #include <gu_util.h>
+#include "Coordinate.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -68,8 +68,8 @@ extern "C" {
 
 typedef struct edge
 {
-    PROPERTY(struct Coordinate, leftPoint)
-    PROPERTY(struct Coordinate, rightPoint)
+    PROPERTY(struct coordinate, leftPoint)
+    PROPERTY(struct coordinate, rightPoint)
 } edge;
 
 #ifdef __cplusplus
@@ -78,7 +78,8 @@ typedef struct edge
 
 #ifdef __cplusplus
 
-struct Edge: edge {
+struct Edge: edge
+{
 
     Edge();
     Edge(Coordinate leftPoint, Coordinate rightPoint);

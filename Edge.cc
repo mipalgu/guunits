@@ -58,7 +58,15 @@
 
 #include "Edge.h"
 
-Edge::Edge(): _leftPoint(Coordinate()), _rightPoint(Coordinate()) {}
+Edge::Edge()
+{
+    this->set_leftPoint(Coordinate());
+    this->set_rightPoint(Coordinate());
+}
 
-Edge::Edge(Coordinate leftPoint, Coordinate rightPoint): _leftPoint(leftPoint), _rightPoint(rightPoint) {}
+Edge::Edge(Coordinate leftPoint, Coordinate rightPoint)
+{
+    this->set_leftPoint(leftPoint);
+    this->set_rightPoint(rightPoint);
+}
 
