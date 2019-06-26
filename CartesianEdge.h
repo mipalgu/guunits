@@ -62,16 +62,30 @@
 #include <gu_util.h>
 #include "CartesianCoordinate.h"
 
-struct CartesianEdge
-{
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct cartesian_edge
+{
     PROPERTY(struct CartesianCoordinate, leftPoint)
     PROPERTY(struct CartesianCoordinate, rightPoint)
+} cartesian_edge;
 
 #ifdef __cplusplus
+};
+#endif
+
+#ifdef __cplusplus
+
+struct CartesianEdge: cartesian_edge
+{
+
     CartesianEdge();
     CartesianEdge(CartesianCoordinate leftPoint, CartesianCoordinate rightPoint);
-#endif
+
 };
+
+#endif
 
 #endif  /* CARTESIANEDGE_H */

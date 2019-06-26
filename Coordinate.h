@@ -62,16 +62,29 @@
 #include <gu_util.h>
 #include "guunits.h"
 
-struct Coordinate {
-
-    PROPERTY(degrees_t, direction)
-    PROPERTY(centimetres_u, distance)
-
 #ifdef __cplusplus
-    Coordinate();
-    Coordinate(degrees_t direction, centimetres_u distance);
+extern "C" {
 #endif
 
+typedef struct coordinate
+{
+    PROPERTY(degrees_t, direction)
+    PROPERTY(centimetres_u, distance)
+} coordinate;
+
+#ifdef __cplusplus
 };
+#endif
+
+#ifdef __cplusplus
+
+struct Coordinate: coordinate {
+
+    Coordinate();
+    Coordinate(degrees_t direction, centimetres_u distance);
+
+};
+
+#endif
 
 #endif  /* COORDINATE_H */

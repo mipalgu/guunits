@@ -62,16 +62,29 @@
 #include "Coordinate.h"
 #include <gu_util.h>
 
-struct Edge {
-
-    PROPERTY(struct Coordinate, leftPoint)
-    PROPERTY(struct Coordinate, rightPoint)
-
 #ifdef __cplusplus
-    Edge();
-    Edge(Coordinate leftPoint, Coordinate rightPoint);
+extern "C" {
 #endif
 
+typedef struct edge
+{
+    PROPERTY(struct Coordinate, leftPoint)
+    PROPERTY(struct Coordinate, rightPoint)
+} edge;
+
+#ifdef __cplusplus
 };
+#endif
+
+#ifdef __cplusplus
+
+struct Edge: edge {
+
+    Edge();
+    Edge(Coordinate leftPoint, Coordinate rightPoint);
+
+};
+
+#endif
 
 #endif  /* EDGE_H */

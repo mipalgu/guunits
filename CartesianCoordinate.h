@@ -62,17 +62,30 @@
 #include <gu_util.h>
 #include "guunits.h"
 
-struct CartesianCoordinate
-{
-
-    PROPERTY(centimetres_t, x)
-    PROPERTY(centimetres_t, y)
-
 #ifdef __cplusplus
-    CartesianCoordinate();
-    CartesianCoordinate(centimetres_t x, centimetres_t y);
+extern "C" {
 #endif
 
+typedef struct cartesian_coordinate
+{
+    PROPERTY(centimetres_t, x)
+    PROPERTY(centimetres_t, y)
+} cartesian_coordinate;
+
+#ifdef __cplusplus
 };
+#endif
+
+#ifdef __cplusplus
+
+struct CartesianCoordinate: cartesian_coordinate
+{
+
+    CartesianCoordinate();
+    CartesianCoordinate(centimetres_t x, centimetres_t y);
+
+};
+
+#endif
 
 #endif  /* CARTESIANCOORDINATE_H */
