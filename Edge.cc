@@ -64,7 +64,7 @@ Edge::Edge()
     this->set_rightPoint(Coordinate());
 }
 
-Edge::Edge(Coordinate leftPoint, Coordinate rightPoint)
+Edge::Edge(::Coordinate leftPoint, ::Coordinate rightPoint)
 {
     this->set_leftPoint(leftPoint);
     this->set_rightPoint(rightPoint);

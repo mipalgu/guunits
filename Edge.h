@@ -82,7 +82,7 @@ struct Edge: edge
 {
 
     Edge();
-    Edge(Coordinate leftPoint, Coordinate rightPoint);
+    Edge(::Coordinate leftPoint, ::Coordinate rightPoint);
 
 };
 
