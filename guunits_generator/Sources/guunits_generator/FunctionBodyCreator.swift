@@ -1,9 +1,8 @@
-//
 /*
- * FunctionCreator.swift
+ * FunctionBodyCreator.swift
  * guunits_generator
  *
- * Created by Callum McColl on 29/10/19.
+ * Created by Callum McColl on 15/6/19.
  * Copyright © 2019 Callum McColl. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -57,10 +56,10 @@
  *
  */
 
-protocol FunctionCreator: FunctionDefinitionCreator, FunctionBodyCreator {
+protocol FunctionBodyCreator {
     
-    func convert(_ str: String, from type: NumericTypes, to unit: Unit, sign: Signs) -> String
+    associatedtype Unit: UnitProtocol
     
-    func convert(_ str: String, from unit: Unit, sign: Signs, to type: NumericTypes) -> String
+    func createFunction(unit: Unit, to otherUnit: Unit, sign: Signs, otherSign: Signs) -> String
     
 }

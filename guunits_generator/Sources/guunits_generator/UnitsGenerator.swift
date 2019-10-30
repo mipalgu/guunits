@@ -58,21 +58,23 @@
 
 import Foundation
 
-typealias DistanceUnitsGenerator = UnitsGenerator<GradualFunctionCreator<DistanceUnits>>
-typealias TimeUnitsGenerator = UnitsGenerator<GradualFunctionCreator<TimeUnits>>
-typealias AngleUnitsGenerator = UnitsGenerator<AngleFunctionCreator>
+typealias DistanceUnitsGenerator = UnitsGenerator<CompositeFunctionCreator<GradualFunctionCreator<DistanceUnits>, CFunctionDefinitionCreator<DistanceUnits>, NumericTypeConverter>>
+typealias TimeUnitsGenerator = UnitsGenerator<CompositeFunctionCreator<GradualFunctionCreator<TimeUnits>, CFunctionDefinitionCreator<TimeUnits>, NumericTypeConverter>>
+typealias AngleUnitsGenerator = UnitsGenerator<CompositeFunctionCreator<AngleFunctionCreator, CFunctionDefinitionCreator<AngleUnits>, NumericTypeConverter>>
+
+typealias CPPDistanceUnitsGenerator = UnitsGenerator<CompositeFunctionCreator<DelegatingFunctionCreator<DistanceUnits>, CPPFunctionDefinitionCreator<DistanceUnits>, DelegatingNumericConverter>>
+typealias CPPTimeUnitsGenerator = UnitsGenerator<CompositeFunctionCreator<DelegatingFunctionCreator<TimeUnits>, CPPFunctionDefinitionCreator<TimeUnits>, DelegatingNumericConverter>>
+typealias CPPAngleUnitsGenerator = UnitsGenerator<CompositeFunctionCreator<DelegatingFunctionCreator<AngleUnits>, CPPFunctionDefinitionCreator<AngleUnits>, DelegatingNumericConverter>>
 
 struct UnitsGenerator<Creator: FunctionCreator> {
     
     let creator: Creator
     
     fileprivate let helpers: FunctionHelpers<Creator.Unit>
-    fileprivate let numericConverter: NumericTypeConverter
     
-    init(creator: Creator, helpers: FunctionHelpers<Creator.Unit> = FunctionHelpers<Creator.Unit>(), numericConverter: NumericTypeConverter = NumericTypeConverter()) {
+    init(creator: Creator, helpers: FunctionHelpers<Creator.Unit> = FunctionHelpers<Creator.Unit>()) {
         self.creator = creator
         self.helpers = helpers
-        self.numericConverter = numericConverter
     }
     
     func generateDeclarations(forUnits units: [Creator.Unit]) -> String? {
@@ -136,7 +138,7 @@ struct UnitsGenerator<Creator: FunctionCreator> {
                  * Convert \(unit)_\(sign.rawValue) to \(otherUnit)_\(otherSign.rawValue).
                  */
                 """
-            let definition = self.helpers.functionDefinition(forUnit: unit, to: otherUnit, sign: sign, otherSign: otherSign)
+            let definition = self.creator.functionDefinition(forUnit: unit, to: otherUnit, sign: sign, otherSign: otherSign)
             if false == includeImplementation {
                 return comment + "\n" + definition + ";"
             }
@@ -152,11 +154,11 @@ struct UnitsGenerator<Creator: FunctionCreator> {
                  * Convert \(unit)_\(sign.rawValue) to \(type.rawValue).
                  */
                 """
-            let definition = self.helpers.functionDefinition(forUnit: unit, sign: sign, to: type)
+            let definition = self.creator.functionDefinition(forUnit: unit, sign: sign, to: type)
             if false == includeImplementation {
                 return comment + "\n" + definition + ";"
             }
-            let body = self.numericConverter.convert("\(unit)", from: unit, sign: sign, to: type)
+            let body = self.creator.convert("\(unit)", from: unit, sign: sign, to: type)
             return comment + "\n" + definition + "\n{\n" + "    return " + body + ";\n}"
         }
     }
@@ -168,40 +170,121 @@ struct UnitsGenerator<Creator: FunctionCreator> {
              * Convert \(type.rawValue) to \(unit)_\(sign.rawValue).
              */
             """
-            let definition = self.helpers.functionDefinition(from: type, to: unit, sign: sign)
+            let definition = self.creator.functionDefinition(from: type, to: unit, sign: sign)
             if false == includeImplementation {
                 return comment + "\n" + definition + ";"
             }
-            let body = self.numericConverter.convert("\(unit)", from: type, to: unit, sign: sign)
+            let body = self.creator.convert("\(unit)", from: type, to: unit, sign: sign)
             return comment + "\n" + definition + "\n{\n" + "    return " + body + ";\n}"
         }
     }
 
 }
 
-extension UnitsGenerator where Creator == GradualFunctionCreator<DistanceUnits> {
+extension UnitsGenerator where Creator == CompositeFunctionCreator<GradualFunctionCreator<DistanceUnits>, CFunctionDefinitionCreator<DistanceUnits>, NumericTypeConverter> {
     
     init(unitDifference: [Creator.Unit: Int]) {
-        self.init(creator: GradualFunctionCreator(unitDifference: unitDifference))
+        self.init(creator: CompositeFunctionCreator(
+            bodyCreator: GradualFunctionCreator(unitDifference: unitDifference),
+            definitionCreator: CFunctionDefinitionCreator(),
+            numericConverter: NumericTypeConverter()
+        ))
     }
     
 }
 
-extension UnitsGenerator where Creator == GradualFunctionCreator<TimeUnits> {
+extension UnitsGenerator where Creator == CompositeFunctionCreator<GradualFunctionCreator<DistanceUnits>, CPPFunctionDefinitionCreator<DistanceUnits>, NumericTypeConverter> {
     
     init(unitDifference: [Creator.Unit: Int]) {
-        self.init(creator: GradualFunctionCreator(unitDifference: unitDifference))
+        self.init(creator: CompositeFunctionCreator(
+            bodyCreator: GradualFunctionCreator(unitDifference: unitDifference),
+            definitionCreator: CPPFunctionDefinitionCreator(),
+            numericConverter: NumericTypeConverter()
+        ))
     }
     
 }
 
-extension UnitsGenerator where Creator == AngleFunctionCreator {
+extension UnitsGenerator where Creator == CompositeFunctionCreator<GradualFunctionCreator<TimeUnits>, CFunctionDefinitionCreator<TimeUnits>, NumericTypeConverter> {
     
+    init(unitDifference: [Creator.Unit: Int]) {
+        self.init(creator: CompositeFunctionCreator(
+            bodyCreator: GradualFunctionCreator(unitDifference: unitDifference),
+            definitionCreator: CFunctionDefinitionCreator(),
+            numericConverter: NumericTypeConverter()
+        ))
+    }
     
-    init(creator: AngleFunctionCreator = AngleFunctionCreator(), helpers: FunctionHelpers<Creator.Unit> = FunctionHelpers<Creator.Unit>(), numericConverter: NumericTypeConverter = NumericTypeConverter()) {
-        self.creator = creator
-        self.helpers = helpers
-        self.numericConverter = numericConverter
+}
+
+extension UnitsGenerator where Creator == CompositeFunctionCreator<GradualFunctionCreator<TimeUnits>, CPPFunctionDefinitionCreator<TimeUnits>, NumericTypeConverter> {
+    
+    init(unitDifference: [Creator.Unit: Int]) {
+        self.init(creator: CompositeFunctionCreator(
+            bodyCreator: GradualFunctionCreator(unitDifference: unitDifference),
+            definitionCreator: CPPFunctionDefinitionCreator(),
+            numericConverter: NumericTypeConverter()
+        ))
+    }
+    
+}
+
+extension UnitsGenerator where Creator == CompositeFunctionCreator<AngleFunctionCreator, CFunctionDefinitionCreator<AngleUnits>, NumericTypeConverter> {
+    
+    init(bodyCreator: AngleFunctionCreator = AngleFunctionCreator(), definitionCreator: CFunctionDefinitionCreator<AngleUnits> = CFunctionDefinitionCreator(), numericConverter: NumericTypeConverter = NumericTypeConverter(), helpers: FunctionHelpers<Creator.Unit> = FunctionHelpers<Creator.Unit>()) {
+        self.init(creator: CompositeFunctionCreator(
+            bodyCreator: bodyCreator,
+            definitionCreator: definitionCreator,
+            numericConverter: numericConverter
+        ))
+    }
+    
+}
+
+extension UnitsGenerator where Creator == CompositeFunctionCreator<AngleFunctionCreator, CPPFunctionDefinitionCreator<AngleUnits>, NumericTypeConverter> {
+    
+    init(bodyCreator: AngleFunctionCreator = AngleFunctionCreator(), definitionCreator: CPPFunctionDefinitionCreator<AngleUnits> = CPPFunctionDefinitionCreator(), numericConverter: NumericTypeConverter = NumericTypeConverter(), helpers: FunctionHelpers<Creator.Unit> = FunctionHelpers<Creator.Unit>()) {
+        self.init(creator: CompositeFunctionCreator(
+            bodyCreator: bodyCreator,
+            definitionCreator: definitionCreator,
+            numericConverter: numericConverter
+        ))
+    }
+    
+}
+
+extension UnitsGenerator where Creator == CompositeFunctionCreator<DelegatingFunctionCreator<DistanceUnits>, CPPFunctionDefinitionCreator<DistanceUnits>, DelegatingNumericConverter> {
+    
+    init(bodyCreator: DelegatingFunctionCreator<DistanceUnits> = DelegatingFunctionCreator(), definitionCreator: CPPFunctionDefinitionCreator<DistanceUnits> = CPPFunctionDefinitionCreator(), numericConverter: DelegatingNumericConverter = DelegatingNumericConverter(), helpers: FunctionHelpers<Creator.Unit> = FunctionHelpers<Creator.Unit>()) {
+        self.init(creator: CompositeFunctionCreator(
+            bodyCreator: bodyCreator,
+            definitionCreator: definitionCreator,
+            numericConverter: numericConverter
+        ))
+    }
+    
+}
+
+extension UnitsGenerator where Creator == CompositeFunctionCreator<DelegatingFunctionCreator<TimeUnits>, CPPFunctionDefinitionCreator<TimeUnits>, DelegatingNumericConverter> {
+    
+    init(bodyCreator: DelegatingFunctionCreator<TimeUnits> = DelegatingFunctionCreator(), definitionCreator: CPPFunctionDefinitionCreator<TimeUnits> = CPPFunctionDefinitionCreator(), numericConverter: DelegatingNumericConverter = DelegatingNumericConverter(), helpers: FunctionHelpers<Creator.Unit> = FunctionHelpers<Creator.Unit>()) {
+        self.init(creator: CompositeFunctionCreator(
+            bodyCreator: bodyCreator,
+            definitionCreator: definitionCreator,
+            numericConverter: numericConverter
+        ))
+    }
+    
+}
+
+extension UnitsGenerator where Creator == CompositeFunctionCreator<DelegatingFunctionCreator<AngleUnits>, CPPFunctionDefinitionCreator<AngleUnits>, DelegatingNumericConverter> {
+    
+    init(bodyCreator: DelegatingFunctionCreator<AngleUnits> = DelegatingFunctionCreator(), definitionCreator: CPPFunctionDefinitionCreator<AngleUnits> = CPPFunctionDefinitionCreator(), numericConverter: DelegatingNumericConverter = DelegatingNumericConverter(), helpers: FunctionHelpers<Creator.Unit> = FunctionHelpers<Creator.Unit>()) {
+        self.init(creator: CompositeFunctionCreator(
+            bodyCreator: bodyCreator,
+            definitionCreator: definitionCreator,
+            numericConverter: numericConverter
+        ))
     }
     
 }

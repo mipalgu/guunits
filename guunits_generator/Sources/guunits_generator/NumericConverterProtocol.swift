@@ -1,6 +1,5 @@
-//
 /*
- * FunctionCreator.swift
+ * NumericConverterProtocol.swift
  * guunits_generator
  *
  * Created by Callum McColl on 29/10/19.
@@ -57,10 +56,10 @@
  *
  */
 
-protocol FunctionCreator: FunctionDefinitionCreator, FunctionBodyCreator {
+protocol NumericConverterProtocol {
     
-    func convert(_ str: String, from type: NumericTypes, to unit: Unit, sign: Signs) -> String
+    func convert<Unit: UnitProtocol>(_ str: String, from type: NumericTypes, to unit: Unit, sign: Signs) -> String
     
-    func convert(_ str: String, from unit: Unit, sign: Signs, to type: NumericTypes) -> String
+    func convert<Unit: UnitProtocol>(_ str: String, from unit: Unit, sign: Signs, to type: NumericTypes) -> String
     
 }

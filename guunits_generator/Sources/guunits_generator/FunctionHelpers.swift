@@ -58,31 +58,37 @@
 
 struct FunctionHelpers<Unit: UnitProtocol> {
     
-    func functionName(forUnit unit: Unit, to otherUnit: Unit, sign: Signs, otherSign: Signs) -> String {
-        return "\(unit.abbreviation)_\(sign.rawValue)_to_\(otherUnit.abbreviation)_\(otherSign.rawValue)"
+    fileprivate func collapse(_ sign: Signs?, prefix: String = "_", suffix: String = "") -> String {
+        return sign.map { prefix + $0.rawValue + suffix} ?? ""
     }
     
-    func functionDefinition(forUnit unit: Unit, to otherUnit: Unit, sign: Signs, otherSign: Signs) -> String {
-        let functionName = self.functionName(forUnit: unit, to: otherUnit, sign: sign, otherSign: otherSign)
-        return "\(otherUnit)_\(otherSign.rawValue) \(functionName)(\(unit)_\(sign.rawValue) \(unit))"
+    func functionName(forUnit unit: Unit, to otherUnit: Unit, sign: Signs, otherSign: Signs, unique: Bool = true) -> String {
+        let uniqueSign = collapse(unique ? sign : nil)
+        return "\(unit.abbreviation)\(uniqueSign)_to_\(otherUnit.abbreviation)\(collapse(otherSign))"
     }
     
-    func functionName(forUnit unit: Unit, sign: Signs, to type: NumericTypes) -> String {
-        return "\(unit.abbreviation)_\(sign.rawValue)_to_\(type.abbreviation)"
+    func functionDefinition(forUnit unit: Unit, to otherUnit: Unit, sign: Signs, otherSign: Signs, unique: Bool = true, namespace: String? = nil) -> String {
+        let functionName = self.functionName(forUnit: unit, to: otherUnit, sign: sign, otherSign: otherSign, unique: unique)
+        return "\(otherUnit)\(collapse(otherSign)) \(namespace ?? "")\(functionName)(\(unit)\(collapse(sign)) \(unit))"
     }
     
-    func functionDefinition(forUnit unit: Unit, sign: Signs, to type: NumericTypes) -> String {
-        let functionName = self.functionName(forUnit: unit, sign: sign, to: type)
-        return "\(type.rawValue) \(functionName)(\(unit)_\(sign.rawValue) \(unit))"
+    func functionName(forUnit unit: Unit, sign: Signs, to type: NumericTypes, unique: Bool = true) -> String {
+        return "\(unit.abbreviation)\(collapse(unique ? sign : nil))_to_\(type.abbreviation)"
     }
     
-    func functionName(from type: NumericTypes, to unit: Unit, sign: Signs) -> String {
-        return "\(type.abbreviation)_to_\(unit.abbreviation)_\(sign.rawValue)"
+    func functionDefinition(forUnit unit: Unit, sign: Signs, to type: NumericTypes, unique: Bool = true, namespace: String? = nil) -> String {
+        let functionName = self.functionName(forUnit: unit, sign: sign, to: type, unique: unique)
+        return "\(type.rawValue) \(namespace ?? "")\(functionName)(\(unit)\(collapse(sign)) \(unit))"
     }
     
-    func functionDefinition(from type: NumericTypes, to unit: Unit, sign: Signs) -> String {
-        let functionName = self.functionName(from: type, to: unit, sign: sign)
-        return "\(unit)_\(sign.rawValue) \(functionName)(\(type.rawValue) \(unit))"
+    func functionName(from type: NumericTypes, to unit: Unit, sign: Signs, unique: Bool = true) -> String {
+        let uniquePrefix = unique || type == .int || type == .uint ? "\(type.abbreviation)_to_" : ""
+        return uniquePrefix + "\(unit.abbreviation)\(collapse(sign))"
+    }
+    
+    func functionDefinition(from type: NumericTypes, to unit: Unit, sign: Signs, unique: Bool = true, namespace: String? = nil) -> String {
+        let functionName = self.functionName(from: type, to: unit, sign: sign, unique: unique)
+        return "\(unit)\(collapse(sign)) \(namespace ?? "")\(functionName)(\(type.rawValue) \(unit))"
     }
     
     func modify(value: Int, forSign sign: Signs) -> String {

@@ -1,6 +1,5 @@
-//
 /*
- * FunctionCreator.swift
+ * DelegatingFunctionCreator.swift
  * guunits_generator
  *
  * Created by Callum McColl on 29/10/19.
@@ -57,10 +56,13 @@
  *
  */
 
-protocol FunctionCreator: FunctionDefinitionCreator, FunctionBodyCreator {
+struct DelegatingFunctionCreator<Unit: UnitProtocol>: FunctionBodyCreator where Unit.AllCases.Index == Int {
     
-    func convert(_ str: String, from type: NumericTypes, to unit: Unit, sign: Signs) -> String
+    fileprivate let helpers: FunctionHelpers<Unit> = FunctionHelpers()
     
-    func convert(_ str: String, from unit: Unit, sign: Signs, to type: NumericTypes) -> String
+    func createFunction(unit: Unit, to otherUnit: Unit, sign: Signs, otherSign: Signs) -> String {
+        let cDefinition = self.helpers.functionName(forUnit: unit, to: otherUnit, sign: sign, otherSign: otherSign)
+        return "    return ::\(cDefinition)(\(unit));"
+    }
     
 }
