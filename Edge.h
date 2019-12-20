@@ -66,11 +66,11 @@
 extern "C" {
 #endif
 
-typedef struct edge
+typedef struct gu_edge
 {
-    PROPERTY(struct coordinate, leftPoint)
-    PROPERTY(struct coordinate, rightPoint)
-} edge;
+    PROPERTY(struct gu_coordinate, leftPoint)
+    PROPERTY(struct gu_coordinate, rightPoint)
+} gu_edge;
 
 #ifdef __cplusplus
 };
@@ -78,7 +78,7 @@ typedef struct edge
 
 #ifdef __cplusplus
 
-struct Edge: edge
+struct Edge: gu_edge
 {
 
     Edge();

@@ -66,11 +66,11 @@
 extern "C" {
 #endif
 
-typedef struct coordinate
+typedef struct gu_coordinate
 {
     PROPERTY(degrees_t, direction)
     PROPERTY(centimetres_u, distance)
-} coordinate;
+} gu_coordinate;
 
 #ifdef __cplusplus
 };
@@ -78,7 +78,7 @@ typedef struct coordinate
 
 #ifdef __cplusplus
 
-struct Coordinate: coordinate {
+struct Coordinate: gu_coordinate {
 
     Coordinate();
     Coordinate(degrees_t direction, centimetres_u distance);
