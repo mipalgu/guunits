@@ -6790,7 +6790,7 @@ seconds_u u_to_s_u(unsigned int seconds)
     return ((seconds_u) (seconds));
 }
 
-//Angle Conversion Functions
+// Angle Conversion Functions
 
 /**
  * Convert degrees_d to degrees_f.
@@ -8774,5 +8774,1737 @@ radians_t u_to_rad_t(unsigned int radians)
 radians_u u_to_rad_u(unsigned int radians)
 {
     return ((radians_u) (radians));
+}
+
+// Image Conversion Functions
+
+/**
+ * Convert double to pixels_d.
+ */
+pixels_d d_to_px_d(double pixels)
+{
+    return ((pixels_d) (pixels));
+}
+
+/**
+ * Convert double to pixels_f.
+ */
+pixels_f d_to_px_f(double pixels)
+{
+    return ((pixels_f) (pixels));
+}
+
+/**
+ * Convert double to pixels_t.
+ */
+pixels_t d_to_px_t(double pixels)
+{
+    return ((pixels_t) (((double) (round(pixels)))));
+}
+
+/**
+ * Convert double to pixels_u.
+ */
+pixels_u d_to_px_u(double pixels)
+{
+    return ((pixels_u) (MAX(((double) (0)), ((double) (round(pixels))))));
+}
+
+/**
+ * Convert float to pixels_d.
+ */
+pixels_d f_to_px_d(float pixels)
+{
+    return ((pixels_d) (pixels));
+}
+
+/**
+ * Convert float to pixels_f.
+ */
+pixels_f f_to_px_f(float pixels)
+{
+    return ((pixels_f) (pixels));
+}
+
+/**
+ * Convert float to pixels_t.
+ */
+pixels_t f_to_px_t(float pixels)
+{
+    return ((pixels_t) (((float) (round(((double) (pixels)))))));
+}
+
+/**
+ * Convert float to pixels_u.
+ */
+pixels_u f_to_px_u(float pixels)
+{
+    return ((pixels_u) (MAX(((float) (0)), ((float) (round(((double) (pixels))))))));
+}
+
+/**
+ * Convert int16_t to pixels_d.
+ */
+pixels_d i16_to_px_d(int16_t pixels)
+{
+    return ((pixels_d) (pixels));
+}
+
+/**
+ * Convert int16_t to pixels_f.
+ */
+pixels_f i16_to_px_f(int16_t pixels)
+{
+    return ((pixels_f) (pixels));
+}
+
+/**
+ * Convert int16_t to pixels_t.
+ */
+pixels_t i16_to_px_t(int16_t pixels)
+{
+    return ((pixels_t) (pixels));
+}
+
+/**
+ * Convert int16_t to pixels_u.
+ */
+pixels_u i16_to_px_u(int16_t pixels)
+{
+    return ((pixels_u) (MAX(((int16_t) (0)), pixels)));
+}
+
+/**
+ * Convert int32_t to pixels_d.
+ */
+pixels_d i32_to_px_d(int32_t pixels)
+{
+    return ((pixels_d) (pixels));
+}
+
+/**
+ * Convert int32_t to pixels_f.
+ */
+pixels_f i32_to_px_f(int32_t pixels)
+{
+    return ((pixels_f) (pixels));
+}
+
+/**
+ * Convert int32_t to pixels_t.
+ */
+pixels_t i32_to_px_t(int32_t pixels)
+{
+    return ((pixels_t) (MIN(((int32_t) (INT_MAX)), MAX(((int32_t) (INT_MIN)), pixels))));
+}
+
+/**
+ * Convert int32_t to pixels_u.
+ */
+pixels_u i32_to_px_u(int32_t pixels)
+{
+    return ((pixels_u) (MAX(((int32_t) (0)), pixels)));
+}
+
+/**
+ * Convert int64_t to pixels_d.
+ */
+pixels_d i64_to_px_d(int64_t pixels)
+{
+    return ((pixels_d) (pixels));
+}
+
+/**
+ * Convert int64_t to pixels_f.
+ */
+pixels_f i64_to_px_f(int64_t pixels)
+{
+    return ((pixels_f) (pixels));
+}
+
+/**
+ * Convert int64_t to pixels_t.
+ */
+pixels_t i64_to_px_t(int64_t pixels)
+{
+    return ((pixels_t) (MIN(((int64_t) (INT_MAX)), MAX(((int64_t) (INT_MIN)), pixels))));
+}
+
+/**
+ * Convert int64_t to pixels_u.
+ */
+pixels_u i64_to_px_u(int64_t pixels)
+{
+    return ((pixels_u) (MAX(((int64_t) (0)), pixels)));
+}
+
+/**
+ * Convert int8_t to pixels_d.
+ */
+pixels_d i8_to_px_d(int8_t pixels)
+{
+    return ((pixels_d) (pixels));
+}
+
+/**
+ * Convert int8_t to pixels_f.
+ */
+pixels_f i8_to_px_f(int8_t pixels)
+{
+    return ((pixels_f) (pixels));
+}
+
+/**
+ * Convert int8_t to pixels_t.
+ */
+pixels_t i8_to_px_t(int8_t pixels)
+{
+    return ((pixels_t) (pixels));
+}
+
+/**
+ * Convert int8_t to pixels_u.
+ */
+pixels_u i8_to_px_u(int8_t pixels)
+{
+    return ((pixels_u) (MAX(((int8_t) (0)), pixels)));
+}
+
+/**
+ * Convert int to pixels_d.
+ */
+pixels_d i_to_px_d(int pixels)
+{
+    return ((pixels_d) (pixels));
+}
+
+/**
+ * Convert int to pixels_f.
+ */
+pixels_f i_to_px_f(int pixels)
+{
+    return ((pixels_f) (pixels));
+}
+
+/**
+ * Convert int to pixels_t.
+ */
+pixels_t i_to_px_t(int pixels)
+{
+    return ((pixels_t) (pixels));
+}
+
+/**
+ * Convert int to pixels_u.
+ */
+pixels_u i_to_px_u(int pixels)
+{
+    return ((pixels_u) (MAX(((int) (0)), pixels)));
+}
+
+/**
+ * Convert pixels_d to double.
+ */
+double px_d_to_d(pixels_d pixels)
+{
+    return ((double) (pixels));
+}
+
+/**
+ * Convert pixels_d to float.
+ */
+float px_d_to_f(pixels_d pixels)
+{
+    return ((float) (pixels));
+}
+
+/**
+ * Convert pixels_d to int.
+ */
+int px_d_to_i(pixels_d pixels)
+{
+    return ((int) (((pixels_d) (round(pixels)))));
+}
+
+/**
+ * Convert pixels_d to int16_t.
+ */
+int16_t px_d_to_i16(pixels_d pixels)
+{
+    return ((int16_t) (((pixels_d) (round(pixels)))));
+}
+
+/**
+ * Convert pixels_d to int32_t.
+ */
+int32_t px_d_to_i32(pixels_d pixels)
+{
+    return ((int32_t) (((pixels_d) (round(pixels)))));
+}
+
+/**
+ * Convert pixels_d to int64_t.
+ */
+int64_t px_d_to_i64(pixels_d pixels)
+{
+    return ((int64_t) (((pixels_d) (round(pixels)))));
+}
+
+/**
+ * Convert pixels_d to int8_t.
+ */
+int8_t px_d_to_i8(pixels_d pixels)
+{
+    return ((int8_t) (((pixels_d) (round(pixels)))));
+}
+
+/**
+ * Convert pixels_d to pixels_f.
+ */
+pixels_f px_d_to_px_f(pixels_d pixels)
+{
+    return ((pixels_f) (pixels));
+}
+
+/**
+ * Convert pixels_d to pixels_t.
+ */
+pixels_t px_d_to_px_t(pixels_d pixels)
+{
+    return ((pixels_t) (round(((double) (pixels)))));
+}
+
+/**
+ * Convert pixels_d to pixels_u.
+ */
+pixels_u px_d_to_px_u(pixels_d pixels)
+{
+    return ((pixels_u) (round(((double) (pixels)))));
+}
+
+/**
+ * Convert pixels_d to uint16_t.
+ */
+uint16_t px_d_to_u16(pixels_d pixels)
+{
+    return ((uint16_t) (MAX(((pixels_d) (0)), ((pixels_d) (round(pixels))))));
+}
+
+/**
+ * Convert pixels_d to uint32_t.
+ */
+uint32_t px_d_to_u32(pixels_d pixels)
+{
+    return ((uint32_t) (MAX(((pixels_d) (0)), ((pixels_d) (round(pixels))))));
+}
+
+/**
+ * Convert pixels_d to uint64_t.
+ */
+uint64_t px_d_to_u64(pixels_d pixels)
+{
+    return ((uint64_t) (MAX(((pixels_d) (0)), ((pixels_d) (round(pixels))))));
+}
+
+/**
+ * Convert pixels_d to uint8_t.
+ */
+uint8_t px_d_to_u8(pixels_d pixels)
+{
+    return ((uint8_t) (MAX(((pixels_d) (0)), ((pixels_d) (round(pixels))))));
+}
+
+/**
+ * Convert pixels_d to unsigned int.
+ */
+unsigned int px_d_to_u(pixels_d pixels)
+{
+    return ((unsigned int) (MAX(((pixels_d) (0)), ((pixels_d) (round(pixels))))));
+}
+
+/**
+ * Convert pixels_f to double.
+ */
+double px_f_to_d(pixels_f pixels)
+{
+    return ((double) (pixels));
+}
+
+/**
+ * Convert pixels_f to float.
+ */
+float px_f_to_f(pixels_f pixels)
+{
+    return ((float) (pixels));
+}
+
+/**
+ * Convert pixels_f to int.
+ */
+int px_f_to_i(pixels_f pixels)
+{
+    return ((int) (((pixels_f) (round(((double) (pixels)))))));
+}
+
+/**
+ * Convert pixels_f to int16_t.
+ */
+int16_t px_f_to_i16(pixels_f pixels)
+{
+    return ((int16_t) (((pixels_f) (round(((double) (pixels)))))));
+}
+
+/**
+ * Convert pixels_f to int32_t.
+ */
+int32_t px_f_to_i32(pixels_f pixels)
+{
+    return ((int32_t) (((pixels_f) (round(((double) (pixels)))))));
+}
+
+/**
+ * Convert pixels_f to int64_t.
+ */
+int64_t px_f_to_i64(pixels_f pixels)
+{
+    return ((int64_t) (((pixels_f) (round(((double) (pixels)))))));
+}
+
+/**
+ * Convert pixels_f to int8_t.
+ */
+int8_t px_f_to_i8(pixels_f pixels)
+{
+    return ((int8_t) (((pixels_f) (round(((double) (pixels)))))));
+}
+
+/**
+ * Convert pixels_f to pixels_d.
+ */
+pixels_d px_f_to_px_d(pixels_f pixels)
+{
+    return ((pixels_d) (pixels));
+}
+
+/**
+ * Convert pixels_f to pixels_t.
+ */
+pixels_t px_f_to_px_t(pixels_f pixels)
+{
+    return ((pixels_t) (round(((double) (pixels)))));
+}
+
+/**
+ * Convert pixels_f to pixels_u.
+ */
+pixels_u px_f_to_px_u(pixels_f pixels)
+{
+    return ((pixels_u) (round(((double) (pixels)))));
+}
+
+/**
+ * Convert pixels_f to uint16_t.
+ */
+uint16_t px_f_to_u16(pixels_f pixels)
+{
+    return ((uint16_t) (MAX(((pixels_f) (0)), ((pixels_f) (round(((double) (pixels))))))));
+}
+
+/**
+ * Convert pixels_f to uint32_t.
+ */
+uint32_t px_f_to_u32(pixels_f pixels)
+{
+    return ((uint32_t) (MAX(((pixels_f) (0)), ((pixels_f) (round(((double) (pixels))))))));
+}
+
+/**
+ * Convert pixels_f to uint64_t.
+ */
+uint64_t px_f_to_u64(pixels_f pixels)
+{
+    return ((uint64_t) (MAX(((pixels_f) (0)), ((pixels_f) (round(((double) (pixels))))))));
+}
+
+/**
+ * Convert pixels_f to uint8_t.
+ */
+uint8_t px_f_to_u8(pixels_f pixels)
+{
+    return ((uint8_t) (MAX(((pixels_f) (0)), ((pixels_f) (round(((double) (pixels))))))));
+}
+
+/**
+ * Convert pixels_f to unsigned int.
+ */
+unsigned int px_f_to_u(pixels_f pixels)
+{
+    return ((unsigned int) (MAX(((pixels_f) (0)), ((pixels_f) (round(((double) (pixels))))))));
+}
+
+/**
+ * Convert pixels_t to double.
+ */
+double px_t_to_d(pixels_t pixels)
+{
+    return ((double) (pixels));
+}
+
+/**
+ * Convert pixels_t to float.
+ */
+float px_t_to_f(pixels_t pixels)
+{
+    return ((float) (pixels));
+}
+
+/**
+ * Convert pixels_t to int.
+ */
+int px_t_to_i(pixels_t pixels)
+{
+    return ((int) (pixels));
+}
+
+/**
+ * Convert pixels_t to int16_t.
+ */
+int16_t px_t_to_i16(pixels_t pixels)
+{
+    return ((int16_t) (MIN(((pixels_t) (SHRT_MAX)), MAX(((pixels_t) (SHRT_MIN)), pixels))));
+}
+
+/**
+ * Convert pixels_t to int32_t.
+ */
+int32_t px_t_to_i32(pixels_t pixels)
+{
+    return ((int32_t) (MIN(((pixels_t) (INT_MAX)), MAX(((pixels_t) (INT_MIN)), pixels))));
+}
+
+/**
+ * Convert pixels_t to int64_t.
+ */
+int64_t px_t_to_i64(pixels_t pixels)
+{
+    return ((int64_t) (pixels));
+}
+
+/**
+ * Convert pixels_t to int8_t.
+ */
+int8_t px_t_to_i8(pixels_t pixels)
+{
+    return ((int8_t) (MIN(((pixels_t) (127)), MAX(((pixels_t) (-128)), pixels))));
+}
+
+/**
+ * Convert pixels_t to pixels_d.
+ */
+pixels_d px_t_to_px_d(pixels_t pixels)
+{
+    return ((pixels_d) (pixels));
+}
+
+/**
+ * Convert pixels_t to pixels_f.
+ */
+pixels_f px_t_to_px_f(pixels_t pixels)
+{
+    return ((pixels_f) (pixels));
+}
+
+/**
+ * Convert pixels_t to pixels_u.
+ */
+pixels_u px_t_to_px_u(pixels_t pixels)
+{
+    return ((pixels_u) ((pixels) < 0 ? 0 : pixels));
+}
+
+/**
+ * Convert pixels_t to uint16_t.
+ */
+uint16_t px_t_to_u16(pixels_t pixels)
+{
+    return ((uint16_t) (MAX(((pixels_t) (0)), pixels)));
+}
+
+/**
+ * Convert pixels_t to uint32_t.
+ */
+uint32_t px_t_to_u32(pixels_t pixels)
+{
+    return ((uint32_t) (MAX(((pixels_t) (0)), pixels)));
+}
+
+/**
+ * Convert pixels_t to uint64_t.
+ */
+uint64_t px_t_to_u64(pixels_t pixels)
+{
+    return ((uint64_t) (MAX(((pixels_t) (0)), pixels)));
+}
+
+/**
+ * Convert pixels_t to uint8_t.
+ */
+uint8_t px_t_to_u8(pixels_t pixels)
+{
+    return ((uint8_t) (MAX(((pixels_t) (0)), pixels)));
+}
+
+/**
+ * Convert pixels_t to unsigned int.
+ */
+unsigned int px_t_to_u(pixels_t pixels)
+{
+    return ((unsigned int) (MAX(((pixels_t) (0)), pixels)));
+}
+
+/**
+ * Convert pixels_u to double.
+ */
+double px_u_to_d(pixels_u pixels)
+{
+    return ((double) (MIN(((pixels_u) (INT_MAX)), pixels)));
+}
+
+/**
+ * Convert pixels_u to float.
+ */
+float px_u_to_f(pixels_u pixels)
+{
+    return ((float) (MIN(((pixels_u) (INT_MAX)), pixels)));
+}
+
+/**
+ * Convert pixels_u to int.
+ */
+int px_u_to_i(pixels_u pixels)
+{
+    return ((int) (MIN(((pixels_u) (INT_MAX)), pixels)));
+}
+
+/**
+ * Convert pixels_u to int16_t.
+ */
+int16_t px_u_to_i16(pixels_u pixels)
+{
+    return ((int16_t) (MIN(((pixels_u) (SHRT_MAX)), pixels)));
+}
+
+/**
+ * Convert pixels_u to int32_t.
+ */
+int32_t px_u_to_i32(pixels_u pixels)
+{
+    return ((int32_t) (MIN(((pixels_u) (INT_MAX)), pixels)));
+}
+
+/**
+ * Convert pixels_u to int64_t.
+ */
+int64_t px_u_to_i64(pixels_u pixels)
+{
+    return ((int64_t) (pixels));
+}
+
+/**
+ * Convert pixels_u to int8_t.
+ */
+int8_t px_u_to_i8(pixels_u pixels)
+{
+    return ((int8_t) (MIN(((pixels_u) (127)), pixels)));
+}
+
+/**
+ * Convert pixels_u to pixels_d.
+ */
+pixels_d px_u_to_px_d(pixels_u pixels)
+{
+    return ((pixels_d) (pixels));
+}
+
+/**
+ * Convert pixels_u to pixels_f.
+ */
+pixels_f px_u_to_px_f(pixels_u pixels)
+{
+    return ((pixels_f) (pixels));
+}
+
+/**
+ * Convert pixels_u to pixels_t.
+ */
+pixels_t px_u_to_px_t(pixels_u pixels)
+{
+    return ((pixels_t) ((pixels) > ((unsigned int) (INT_MAX)) ? ((unsigned int) (INT_MAX)) : pixels));
+}
+
+/**
+ * Convert pixels_u to uint16_t.
+ */
+uint16_t px_u_to_u16(pixels_u pixels)
+{
+    return ((uint16_t) (MIN(((pixels_u) (USHRT_MAX)), MAX(((pixels_u) (0)), pixels))));
+}
+
+/**
+ * Convert pixels_u to uint32_t.
+ */
+uint32_t px_u_to_u32(pixels_u pixels)
+{
+    return ((uint32_t) (MIN(((pixels_u) (UINT_MAX)), MAX(((pixels_u) (0)), pixels))));
+}
+
+/**
+ * Convert pixels_u to uint64_t.
+ */
+uint64_t px_u_to_u64(pixels_u pixels)
+{
+    return ((uint64_t) (pixels));
+}
+
+/**
+ * Convert pixels_u to uint8_t.
+ */
+uint8_t px_u_to_u8(pixels_u pixels)
+{
+    return ((uint8_t) (MIN(((pixels_u) (255)), MAX(((pixels_u) (0)), pixels))));
+}
+
+/**
+ * Convert pixels_u to unsigned int.
+ */
+unsigned int px_u_to_u(pixels_u pixels)
+{
+    return ((unsigned int) (pixels));
+}
+
+/**
+ * Convert uint16_t to pixels_d.
+ */
+pixels_d u16_to_px_d(uint16_t pixels)
+{
+    return ((pixels_d) (pixels));
+}
+
+/**
+ * Convert uint16_t to pixels_f.
+ */
+pixels_f u16_to_px_f(uint16_t pixels)
+{
+    return ((pixels_f) (pixels));
+}
+
+/**
+ * Convert uint16_t to pixels_t.
+ */
+pixels_t u16_to_px_t(uint16_t pixels)
+{
+    return ((pixels_t) (pixels));
+}
+
+/**
+ * Convert uint16_t to pixels_u.
+ */
+pixels_u u16_to_px_u(uint16_t pixels)
+{
+    return ((pixels_u) (pixels));
+}
+
+/**
+ * Convert uint32_t to pixels_d.
+ */
+pixels_d u32_to_px_d(uint32_t pixels)
+{
+    return ((pixels_d) (MIN(((uint32_t) (INT_MAX)), pixels)));
+}
+
+/**
+ * Convert uint32_t to pixels_f.
+ */
+pixels_f u32_to_px_f(uint32_t pixels)
+{
+    return ((pixels_f) (MIN(((uint32_t) (INT_MAX)), pixels)));
+}
+
+/**
+ * Convert uint32_t to pixels_t.
+ */
+pixels_t u32_to_px_t(uint32_t pixels)
+{
+    return ((pixels_t) (MIN(((uint32_t) (INT_MAX)), pixels)));
+}
+
+/**
+ * Convert uint32_t to pixels_u.
+ */
+pixels_u u32_to_px_u(uint32_t pixels)
+{
+    return ((pixels_u) (MIN(((uint32_t) (UINT_MAX)), MAX(((uint32_t) (0)), pixels))));
+}
+
+/**
+ * Convert uint64_t to pixels_d.
+ */
+pixels_d u64_to_px_d(uint64_t pixels)
+{
+    return ((pixels_d) (MIN(((uint64_t) (INT_MAX)), pixels)));
+}
+
+/**
+ * Convert uint64_t to pixels_f.
+ */
+pixels_f u64_to_px_f(uint64_t pixels)
+{
+    return ((pixels_f) (MIN(((uint64_t) (INT_MAX)), pixels)));
+}
+
+/**
+ * Convert uint64_t to pixels_t.
+ */
+pixels_t u64_to_px_t(uint64_t pixels)
+{
+    return ((pixels_t) (MIN(((uint64_t) (INT_MAX)), pixels)));
+}
+
+/**
+ * Convert uint64_t to pixels_u.
+ */
+pixels_u u64_to_px_u(uint64_t pixels)
+{
+    return ((pixels_u) (MIN(((uint64_t) (UINT_MAX)), MAX(((uint64_t) (0)), pixels))));
+}
+
+/**
+ * Convert uint8_t to pixels_d.
+ */
+pixels_d u8_to_px_d(uint8_t pixels)
+{
+    return ((pixels_d) (pixels));
+}
+
+/**
+ * Convert uint8_t to pixels_f.
+ */
+pixels_f u8_to_px_f(uint8_t pixels)
+{
+    return ((pixels_f) (pixels));
+}
+
+/**
+ * Convert uint8_t to pixels_t.
+ */
+pixels_t u8_to_px_t(uint8_t pixels)
+{
+    return ((pixels_t) (pixels));
+}
+
+/**
+ * Convert uint8_t to pixels_u.
+ */
+pixels_u u8_to_px_u(uint8_t pixels)
+{
+    return ((pixels_u) (pixels));
+}
+
+/**
+ * Convert unsigned int to pixels_d.
+ */
+pixels_d u_to_px_d(unsigned int pixels)
+{
+    return ((pixels_d) (MIN(((unsigned int) (INT_MAX)), pixels)));
+}
+
+/**
+ * Convert unsigned int to pixels_f.
+ */
+pixels_f u_to_px_f(unsigned int pixels)
+{
+    return ((pixels_f) (MIN(((unsigned int) (INT_MAX)), pixels)));
+}
+
+/**
+ * Convert unsigned int to pixels_t.
+ */
+pixels_t u_to_px_t(unsigned int pixels)
+{
+    return ((pixels_t) (MIN(((unsigned int) (INT_MAX)), pixels)));
+}
+
+/**
+ * Convert unsigned int to pixels_u.
+ */
+pixels_u u_to_px_u(unsigned int pixels)
+{
+    return ((pixels_u) (pixels));
+}
+
+// Percent Conversion Functions
+
+/**
+ * Convert double to percent_d.
+ */
+percent_d d_to_pct_d(double percent)
+{
+    return ((percent_d) (percent));
+}
+
+/**
+ * Convert double to percent_f.
+ */
+percent_f d_to_pct_f(double percent)
+{
+    return ((percent_f) (percent));
+}
+
+/**
+ * Convert double to percent_t.
+ */
+percent_t d_to_pct_t(double percent)
+{
+    return ((percent_t) (((double) (round(percent)))));
+}
+
+/**
+ * Convert double to percent_u.
+ */
+percent_u d_to_pct_u(double percent)
+{
+    return ((percent_u) (MAX(((double) (0)), ((double) (round(percent))))));
+}
+
+/**
+ * Convert float to percent_d.
+ */
+percent_d f_to_pct_d(float percent)
+{
+    return ((percent_d) (percent));
+}
+
+/**
+ * Convert float to percent_f.
+ */
+percent_f f_to_pct_f(float percent)
+{
+    return ((percent_f) (percent));
+}
+
+/**
+ * Convert float to percent_t.
+ */
+percent_t f_to_pct_t(float percent)
+{
+    return ((percent_t) (((float) (round(((double) (percent)))))));
+}
+
+/**
+ * Convert float to percent_u.
+ */
+percent_u f_to_pct_u(float percent)
+{
+    return ((percent_u) (MAX(((float) (0)), ((float) (round(((double) (percent))))))));
+}
+
+/**
+ * Convert int16_t to percent_d.
+ */
+percent_d i16_to_pct_d(int16_t percent)
+{
+    return ((percent_d) (percent));
+}
+
+/**
+ * Convert int16_t to percent_f.
+ */
+percent_f i16_to_pct_f(int16_t percent)
+{
+    return ((percent_f) (percent));
+}
+
+/**
+ * Convert int16_t to percent_t.
+ */
+percent_t i16_to_pct_t(int16_t percent)
+{
+    return ((percent_t) (percent));
+}
+
+/**
+ * Convert int16_t to percent_u.
+ */
+percent_u i16_to_pct_u(int16_t percent)
+{
+    return ((percent_u) (MAX(((int16_t) (0)), percent)));
+}
+
+/**
+ * Convert int32_t to percent_d.
+ */
+percent_d i32_to_pct_d(int32_t percent)
+{
+    return ((percent_d) (percent));
+}
+
+/**
+ * Convert int32_t to percent_f.
+ */
+percent_f i32_to_pct_f(int32_t percent)
+{
+    return ((percent_f) (percent));
+}
+
+/**
+ * Convert int32_t to percent_t.
+ */
+percent_t i32_to_pct_t(int32_t percent)
+{
+    return ((percent_t) (MIN(((int32_t) (INT_MAX)), MAX(((int32_t) (INT_MIN)), percent))));
+}
+
+/**
+ * Convert int32_t to percent_u.
+ */
+percent_u i32_to_pct_u(int32_t percent)
+{
+    return ((percent_u) (MAX(((int32_t) (0)), percent)));
+}
+
+/**
+ * Convert int64_t to percent_d.
+ */
+percent_d i64_to_pct_d(int64_t percent)
+{
+    return ((percent_d) (percent));
+}
+
+/**
+ * Convert int64_t to percent_f.
+ */
+percent_f i64_to_pct_f(int64_t percent)
+{
+    return ((percent_f) (percent));
+}
+
+/**
+ * Convert int64_t to percent_t.
+ */
+percent_t i64_to_pct_t(int64_t percent)
+{
+    return ((percent_t) (MIN(((int64_t) (INT_MAX)), MAX(((int64_t) (INT_MIN)), percent))));
+}
+
+/**
+ * Convert int64_t to percent_u.
+ */
+percent_u i64_to_pct_u(int64_t percent)
+{
+    return ((percent_u) (MAX(((int64_t) (0)), percent)));
+}
+
+/**
+ * Convert int8_t to percent_d.
+ */
+percent_d i8_to_pct_d(int8_t percent)
+{
+    return ((percent_d) (percent));
+}
+
+/**
+ * Convert int8_t to percent_f.
+ */
+percent_f i8_to_pct_f(int8_t percent)
+{
+    return ((percent_f) (percent));
+}
+
+/**
+ * Convert int8_t to percent_t.
+ */
+percent_t i8_to_pct_t(int8_t percent)
+{
+    return ((percent_t) (percent));
+}
+
+/**
+ * Convert int8_t to percent_u.
+ */
+percent_u i8_to_pct_u(int8_t percent)
+{
+    return ((percent_u) (MAX(((int8_t) (0)), percent)));
+}
+
+/**
+ * Convert int to percent_d.
+ */
+percent_d i_to_pct_d(int percent)
+{
+    return ((percent_d) (percent));
+}
+
+/**
+ * Convert int to percent_f.
+ */
+percent_f i_to_pct_f(int percent)
+{
+    return ((percent_f) (percent));
+}
+
+/**
+ * Convert int to percent_t.
+ */
+percent_t i_to_pct_t(int percent)
+{
+    return ((percent_t) (percent));
+}
+
+/**
+ * Convert int to percent_u.
+ */
+percent_u i_to_pct_u(int percent)
+{
+    return ((percent_u) (MAX(((int) (0)), percent)));
+}
+
+/**
+ * Convert percent_d to double.
+ */
+double pct_d_to_d(percent_d percent)
+{
+    return ((double) (percent));
+}
+
+/**
+ * Convert percent_d to float.
+ */
+float pct_d_to_f(percent_d percent)
+{
+    return ((float) (percent));
+}
+
+/**
+ * Convert percent_d to int.
+ */
+int pct_d_to_i(percent_d percent)
+{
+    return ((int) (((percent_d) (round(percent)))));
+}
+
+/**
+ * Convert percent_d to int16_t.
+ */
+int16_t pct_d_to_i16(percent_d percent)
+{
+    return ((int16_t) (((percent_d) (round(percent)))));
+}
+
+/**
+ * Convert percent_d to int32_t.
+ */
+int32_t pct_d_to_i32(percent_d percent)
+{
+    return ((int32_t) (((percent_d) (round(percent)))));
+}
+
+/**
+ * Convert percent_d to int64_t.
+ */
+int64_t pct_d_to_i64(percent_d percent)
+{
+    return ((int64_t) (((percent_d) (round(percent)))));
+}
+
+/**
+ * Convert percent_d to int8_t.
+ */
+int8_t pct_d_to_i8(percent_d percent)
+{
+    return ((int8_t) (((percent_d) (round(percent)))));
+}
+
+/**
+ * Convert percent_d to percent_f.
+ */
+percent_f pct_d_to_pct_f(percent_d percent)
+{
+    return ((percent_f) (percent));
+}
+
+/**
+ * Convert percent_d to percent_t.
+ */
+percent_t pct_d_to_pct_t(percent_d percent)
+{
+    return ((percent_t) (round(((double) (percent)))));
+}
+
+/**
+ * Convert percent_d to percent_u.
+ */
+percent_u pct_d_to_pct_u(percent_d percent)
+{
+    return ((percent_u) (round(((double) (percent)))));
+}
+
+/**
+ * Convert percent_d to uint16_t.
+ */
+uint16_t pct_d_to_u16(percent_d percent)
+{
+    return ((uint16_t) (MAX(((percent_d) (0)), ((percent_d) (round(percent))))));
+}
+
+/**
+ * Convert percent_d to uint32_t.
+ */
+uint32_t pct_d_to_u32(percent_d percent)
+{
+    return ((uint32_t) (MAX(((percent_d) (0)), ((percent_d) (round(percent))))));
+}
+
+/**
+ * Convert percent_d to uint64_t.
+ */
+uint64_t pct_d_to_u64(percent_d percent)
+{
+    return ((uint64_t) (MAX(((percent_d) (0)), ((percent_d) (round(percent))))));
+}
+
+/**
+ * Convert percent_d to uint8_t.
+ */
+uint8_t pct_d_to_u8(percent_d percent)
+{
+    return ((uint8_t) (MAX(((percent_d) (0)), ((percent_d) (round(percent))))));
+}
+
+/**
+ * Convert percent_d to unsigned int.
+ */
+unsigned int pct_d_to_u(percent_d percent)
+{
+    return ((unsigned int) (MAX(((percent_d) (0)), ((percent_d) (round(percent))))));
+}
+
+/**
+ * Convert percent_f to double.
+ */
+double pct_f_to_d(percent_f percent)
+{
+    return ((double) (percent));
+}
+
+/**
+ * Convert percent_f to float.
+ */
+float pct_f_to_f(percent_f percent)
+{
+    return ((float) (percent));
+}
+
+/**
+ * Convert percent_f to int.
+ */
+int pct_f_to_i(percent_f percent)
+{
+    return ((int) (((percent_f) (round(((double) (percent)))))));
+}
+
+/**
+ * Convert percent_f to int16_t.
+ */
+int16_t pct_f_to_i16(percent_f percent)
+{
+    return ((int16_t) (((percent_f) (round(((double) (percent)))))));
+}
+
+/**
+ * Convert percent_f to int32_t.
+ */
+int32_t pct_f_to_i32(percent_f percent)
+{
+    return ((int32_t) (((percent_f) (round(((double) (percent)))))));
+}
+
+/**
+ * Convert percent_f to int64_t.
+ */
+int64_t pct_f_to_i64(percent_f percent)
+{
+    return ((int64_t) (((percent_f) (round(((double) (percent)))))));
+}
+
+/**
+ * Convert percent_f to int8_t.
+ */
+int8_t pct_f_to_i8(percent_f percent)
+{
+    return ((int8_t) (((percent_f) (round(((double) (percent)))))));
+}
+
+/**
+ * Convert percent_f to percent_d.
+ */
+percent_d pct_f_to_pct_d(percent_f percent)
+{
+    return ((percent_d) (percent));
+}
+
+/**
+ * Convert percent_f to percent_t.
+ */
+percent_t pct_f_to_pct_t(percent_f percent)
+{
+    return ((percent_t) (round(((double) (percent)))));
+}
+
+/**
+ * Convert percent_f to percent_u.
+ */
+percent_u pct_f_to_pct_u(percent_f percent)
+{
+    return ((percent_u) (round(((double) (percent)))));
+}
+
+/**
+ * Convert percent_f to uint16_t.
+ */
+uint16_t pct_f_to_u16(percent_f percent)
+{
+    return ((uint16_t) (MAX(((percent_f) (0)), ((percent_f) (round(((double) (percent))))))));
+}
+
+/**
+ * Convert percent_f to uint32_t.
+ */
+uint32_t pct_f_to_u32(percent_f percent)
+{
+    return ((uint32_t) (MAX(((percent_f) (0)), ((percent_f) (round(((double) (percent))))))));
+}
+
+/**
+ * Convert percent_f to uint64_t.
+ */
+uint64_t pct_f_to_u64(percent_f percent)
+{
+    return ((uint64_t) (MAX(((percent_f) (0)), ((percent_f) (round(((double) (percent))))))));
+}
+
+/**
+ * Convert percent_f to uint8_t.
+ */
+uint8_t pct_f_to_u8(percent_f percent)
+{
+    return ((uint8_t) (MAX(((percent_f) (0)), ((percent_f) (round(((double) (percent))))))));
+}
+
+/**
+ * Convert percent_f to unsigned int.
+ */
+unsigned int pct_f_to_u(percent_f percent)
+{
+    return ((unsigned int) (MAX(((percent_f) (0)), ((percent_f) (round(((double) (percent))))))));
+}
+
+/**
+ * Convert percent_t to double.
+ */
+double pct_t_to_d(percent_t percent)
+{
+    return ((double) (percent));
+}
+
+/**
+ * Convert percent_t to float.
+ */
+float pct_t_to_f(percent_t percent)
+{
+    return ((float) (percent));
+}
+
+/**
+ * Convert percent_t to int.
+ */
+int pct_t_to_i(percent_t percent)
+{
+    return ((int) (percent));
+}
+
+/**
+ * Convert percent_t to int16_t.
+ */
+int16_t pct_t_to_i16(percent_t percent)
+{
+    return ((int16_t) (MIN(((percent_t) (SHRT_MAX)), MAX(((percent_t) (SHRT_MIN)), percent))));
+}
+
+/**
+ * Convert percent_t to int32_t.
+ */
+int32_t pct_t_to_i32(percent_t percent)
+{
+    return ((int32_t) (MIN(((percent_t) (INT_MAX)), MAX(((percent_t) (INT_MIN)), percent))));
+}
+
+/**
+ * Convert percent_t to int64_t.
+ */
+int64_t pct_t_to_i64(percent_t percent)
+{
+    return ((int64_t) (percent));
+}
+
+/**
+ * Convert percent_t to int8_t.
+ */
+int8_t pct_t_to_i8(percent_t percent)
+{
+    return ((int8_t) (MIN(((percent_t) (127)), MAX(((percent_t) (-128)), percent))));
+}
+
+/**
+ * Convert percent_t to percent_d.
+ */
+percent_d pct_t_to_pct_d(percent_t percent)
+{
+    return ((percent_d) (percent));
+}
+
+/**
+ * Convert percent_t to percent_f.
+ */
+percent_f pct_t_to_pct_f(percent_t percent)
+{
+    return ((percent_f) (percent));
+}
+
+/**
+ * Convert percent_t to percent_u.
+ */
+percent_u pct_t_to_pct_u(percent_t percent)
+{
+    return ((percent_u) ((percent) < 0 ? 0 : percent));
+}
+
+/**
+ * Convert percent_t to uint16_t.
+ */
+uint16_t pct_t_to_u16(percent_t percent)
+{
+    return ((uint16_t) (MAX(((percent_t) (0)), percent)));
+}
+
+/**
+ * Convert percent_t to uint32_t.
+ */
+uint32_t pct_t_to_u32(percent_t percent)
+{
+    return ((uint32_t) (MAX(((percent_t) (0)), percent)));
+}
+
+/**
+ * Convert percent_t to uint64_t.
+ */
+uint64_t pct_t_to_u64(percent_t percent)
+{
+    return ((uint64_t) (MAX(((percent_t) (0)), percent)));
+}
+
+/**
+ * Convert percent_t to uint8_t.
+ */
+uint8_t pct_t_to_u8(percent_t percent)
+{
+    return ((uint8_t) (MAX(((percent_t) (0)), percent)));
+}
+
+/**
+ * Convert percent_t to unsigned int.
+ */
+unsigned int pct_t_to_u(percent_t percent)
+{
+    return ((unsigned int) (MAX(((percent_t) (0)), percent)));
+}
+
+/**
+ * Convert percent_u to double.
+ */
+double pct_u_to_d(percent_u percent)
+{
+    return ((double) (MIN(((percent_u) (INT_MAX)), percent)));
+}
+
+/**
+ * Convert percent_u to float.
+ */
+float pct_u_to_f(percent_u percent)
+{
+    return ((float) (MIN(((percent_u) (INT_MAX)), percent)));
+}
+
+/**
+ * Convert percent_u to int.
+ */
+int pct_u_to_i(percent_u percent)
+{
+    return ((int) (MIN(((percent_u) (INT_MAX)), percent)));
+}
+
+/**
+ * Convert percent_u to int16_t.
+ */
+int16_t pct_u_to_i16(percent_u percent)
+{
+    return ((int16_t) (MIN(((percent_u) (SHRT_MAX)), percent)));
+}
+
+/**
+ * Convert percent_u to int32_t.
+ */
+int32_t pct_u_to_i32(percent_u percent)
+{
+    return ((int32_t) (MIN(((percent_u) (INT_MAX)), percent)));
+}
+
+/**
+ * Convert percent_u to int64_t.
+ */
+int64_t pct_u_to_i64(percent_u percent)
+{
+    return ((int64_t) (percent));
+}
+
+/**
+ * Convert percent_u to int8_t.
+ */
+int8_t pct_u_to_i8(percent_u percent)
+{
+    return ((int8_t) (MIN(((percent_u) (127)), percent)));
+}
+
+/**
+ * Convert percent_u to percent_d.
+ */
+percent_d pct_u_to_pct_d(percent_u percent)
+{
+    return ((percent_d) (percent));
+}
+
+/**
+ * Convert percent_u to percent_f.
+ */
+percent_f pct_u_to_pct_f(percent_u percent)
+{
+    return ((percent_f) (percent));
+}
+
+/**
+ * Convert percent_u to percent_t.
+ */
+percent_t pct_u_to_pct_t(percent_u percent)
+{
+    return ((percent_t) ((percent) > ((unsigned int) (INT_MAX)) ? ((unsigned int) (INT_MAX)) : percent));
+}
+
+/**
+ * Convert percent_u to uint16_t.
+ */
+uint16_t pct_u_to_u16(percent_u percent)
+{
+    return ((uint16_t) (MIN(((percent_u) (USHRT_MAX)), MAX(((percent_u) (0)), percent))));
+}
+
+/**
+ * Convert percent_u to uint32_t.
+ */
+uint32_t pct_u_to_u32(percent_u percent)
+{
+    return ((uint32_t) (MIN(((percent_u) (UINT_MAX)), MAX(((percent_u) (0)), percent))));
+}
+
+/**
+ * Convert percent_u to uint64_t.
+ */
+uint64_t pct_u_to_u64(percent_u percent)
+{
+    return ((uint64_t) (percent));
+}
+
+/**
+ * Convert percent_u to uint8_t.
+ */
+uint8_t pct_u_to_u8(percent_u percent)
+{
+    return ((uint8_t) (MIN(((percent_u) (255)), MAX(((percent_u) (0)), percent))));
+}
+
+/**
+ * Convert percent_u to unsigned int.
+ */
+unsigned int pct_u_to_u(percent_u percent)
+{
+    return ((unsigned int) (percent));
+}
+
+/**
+ * Convert uint16_t to percent_d.
+ */
+percent_d u16_to_pct_d(uint16_t percent)
+{
+    return ((percent_d) (percent));
+}
+
+/**
+ * Convert uint16_t to percent_f.
+ */
+percent_f u16_to_pct_f(uint16_t percent)
+{
+    return ((percent_f) (percent));
+}
+
+/**
+ * Convert uint16_t to percent_t.
+ */
+percent_t u16_to_pct_t(uint16_t percent)
+{
+    return ((percent_t) (percent));
+}
+
+/**
+ * Convert uint16_t to percent_u.
+ */
+percent_u u16_to_pct_u(uint16_t percent)
+{
+    return ((percent_u) (percent));
+}
+
+/**
+ * Convert uint32_t to percent_d.
+ */
+percent_d u32_to_pct_d(uint32_t percent)
+{
+    return ((percent_d) (MIN(((uint32_t) (INT_MAX)), percent)));
+}
+
+/**
+ * Convert uint32_t to percent_f.
+ */
+percent_f u32_to_pct_f(uint32_t percent)
+{
+    return ((percent_f) (MIN(((uint32_t) (INT_MAX)), percent)));
+}
+
+/**
+ * Convert uint32_t to percent_t.
+ */
+percent_t u32_to_pct_t(uint32_t percent)
+{
+    return ((percent_t) (MIN(((uint32_t) (INT_MAX)), percent)));
+}
+
+/**
+ * Convert uint32_t to percent_u.
+ */
+percent_u u32_to_pct_u(uint32_t percent)
+{
+    return ((percent_u) (MIN(((uint32_t) (UINT_MAX)), MAX(((uint32_t) (0)), percent))));
+}
+
+/**
+ * Convert uint64_t to percent_d.
+ */
+percent_d u64_to_pct_d(uint64_t percent)
+{
+    return ((percent_d) (MIN(((uint64_t) (INT_MAX)), percent)));
+}
+
+/**
+ * Convert uint64_t to percent_f.
+ */
+percent_f u64_to_pct_f(uint64_t percent)
+{
+    return ((percent_f) (MIN(((uint64_t) (INT_MAX)), percent)));
+}
+
+/**
+ * Convert uint64_t to percent_t.
+ */
+percent_t u64_to_pct_t(uint64_t percent)
+{
+    return ((percent_t) (MIN(((uint64_t) (INT_MAX)), percent)));
+}
+
+/**
+ * Convert uint64_t to percent_u.
+ */
+percent_u u64_to_pct_u(uint64_t percent)
+{
+    return ((percent_u) (MIN(((uint64_t) (UINT_MAX)), MAX(((uint64_t) (0)), percent))));
+}
+
+/**
+ * Convert uint8_t to percent_d.
+ */
+percent_d u8_to_pct_d(uint8_t percent)
+{
+    return ((percent_d) (percent));
+}
+
+/**
+ * Convert uint8_t to percent_f.
+ */
+percent_f u8_to_pct_f(uint8_t percent)
+{
+    return ((percent_f) (percent));
+}
+
+/**
+ * Convert uint8_t to percent_t.
+ */
+percent_t u8_to_pct_t(uint8_t percent)
+{
+    return ((percent_t) (percent));
+}
+
+/**
+ * Convert uint8_t to percent_u.
+ */
+percent_u u8_to_pct_u(uint8_t percent)
+{
+    return ((percent_u) (percent));
+}
+
+/**
+ * Convert unsigned int to percent_d.
+ */
+percent_d u_to_pct_d(unsigned int percent)
+{
+    return ((percent_d) (MIN(((unsigned int) (INT_MAX)), percent)));
+}
+
+/**
+ * Convert unsigned int to percent_f.
+ */
+percent_f u_to_pct_f(unsigned int percent)
+{
+    return ((percent_f) (MIN(((unsigned int) (INT_MAX)), percent)));
+}
+
+/**
+ * Convert unsigned int to percent_t.
+ */
+percent_t u_to_pct_t(unsigned int percent)
+{
+    return ((percent_t) (MIN(((unsigned int) (INT_MAX)), percent)));
+}
+
+/**
+ * Convert unsigned int to percent_u.
+ */
+percent_u u_to_pct_u(unsigned int percent)
+{
+    return ((percent_u) (percent));
 }
 

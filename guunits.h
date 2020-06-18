@@ -105,6 +105,18 @@ typedef unsigned int radians_u;
 typedef float radians_f;
 typedef double radians_d;
 
+// Image Units.
+typedef int pixels_t;
+typedef unsigned int pixels_u;
+typedef float pixels_f;
+typedef double pixels_d;
+
+// Percent Units.
+typedef int percent_t;
+typedef unsigned int percent_u;
+typedef float percent_f;
+typedef double percent_d;
+
 // Distance Conversion Functions
 
 /**
@@ -4309,7 +4321,7 @@ seconds_t u_to_s_t(unsigned int seconds);
  */
 seconds_u u_to_s_u(unsigned int seconds);
 
-//Angle Conversion Functions
+// Angle Conversion Functions
 
 /**
  * Convert degrees_d to degrees_f.
@@ -5550,6 +5562,1090 @@ radians_t u_to_rad_t(unsigned int radians);
  * Convert unsigned int to radians_u.
  */
 radians_u u_to_rad_u(unsigned int radians);
+
+// Image Conversion Functions
+
+/**
+ * Convert double to pixels_d.
+ */
+pixels_d d_to_px_d(double pixels);
+
+/**
+ * Convert double to pixels_f.
+ */
+pixels_f d_to_px_f(double pixels);
+
+/**
+ * Convert double to pixels_t.
+ */
+pixels_t d_to_px_t(double pixels);
+
+/**
+ * Convert double to pixels_u.
+ */
+pixels_u d_to_px_u(double pixels);
+
+/**
+ * Convert float to pixels_d.
+ */
+pixels_d f_to_px_d(float pixels);
+
+/**
+ * Convert float to pixels_f.
+ */
+pixels_f f_to_px_f(float pixels);
+
+/**
+ * Convert float to pixels_t.
+ */
+pixels_t f_to_px_t(float pixels);
+
+/**
+ * Convert float to pixels_u.
+ */
+pixels_u f_to_px_u(float pixels);
+
+/**
+ * Convert int16_t to pixels_d.
+ */
+pixels_d i16_to_px_d(int16_t pixels);
+
+/**
+ * Convert int16_t to pixels_f.
+ */
+pixels_f i16_to_px_f(int16_t pixels);
+
+/**
+ * Convert int16_t to pixels_t.
+ */
+pixels_t i16_to_px_t(int16_t pixels);
+
+/**
+ * Convert int16_t to pixels_u.
+ */
+pixels_u i16_to_px_u(int16_t pixels);
+
+/**
+ * Convert int32_t to pixels_d.
+ */
+pixels_d i32_to_px_d(int32_t pixels);
+
+/**
+ * Convert int32_t to pixels_f.
+ */
+pixels_f i32_to_px_f(int32_t pixels);
+
+/**
+ * Convert int32_t to pixels_t.
+ */
+pixels_t i32_to_px_t(int32_t pixels);
+
+/**
+ * Convert int32_t to pixels_u.
+ */
+pixels_u i32_to_px_u(int32_t pixels);
+
+/**
+ * Convert int64_t to pixels_d.
+ */
+pixels_d i64_to_px_d(int64_t pixels);
+
+/**
+ * Convert int64_t to pixels_f.
+ */
+pixels_f i64_to_px_f(int64_t pixels);
+
+/**
+ * Convert int64_t to pixels_t.
+ */
+pixels_t i64_to_px_t(int64_t pixels);
+
+/**
+ * Convert int64_t to pixels_u.
+ */
+pixels_u i64_to_px_u(int64_t pixels);
+
+/**
+ * Convert int8_t to pixels_d.
+ */
+pixels_d i8_to_px_d(int8_t pixels);
+
+/**
+ * Convert int8_t to pixels_f.
+ */
+pixels_f i8_to_px_f(int8_t pixels);
+
+/**
+ * Convert int8_t to pixels_t.
+ */
+pixels_t i8_to_px_t(int8_t pixels);
+
+/**
+ * Convert int8_t to pixels_u.
+ */
+pixels_u i8_to_px_u(int8_t pixels);
+
+/**
+ * Convert int to pixels_d.
+ */
+pixels_d i_to_px_d(int pixels);
+
+/**
+ * Convert int to pixels_f.
+ */
+pixels_f i_to_px_f(int pixels);
+
+/**
+ * Convert int to pixels_t.
+ */
+pixels_t i_to_px_t(int pixels);
+
+/**
+ * Convert int to pixels_u.
+ */
+pixels_u i_to_px_u(int pixels);
+
+/**
+ * Convert pixels_d to double.
+ */
+double px_d_to_d(pixels_d pixels);
+
+/**
+ * Convert pixels_d to float.
+ */
+float px_d_to_f(pixels_d pixels);
+
+/**
+ * Convert pixels_d to int.
+ */
+int px_d_to_i(pixels_d pixels);
+
+/**
+ * Convert pixels_d to int16_t.
+ */
+int16_t px_d_to_i16(pixels_d pixels);
+
+/**
+ * Convert pixels_d to int32_t.
+ */
+int32_t px_d_to_i32(pixels_d pixels);
+
+/**
+ * Convert pixels_d to int64_t.
+ */
+int64_t px_d_to_i64(pixels_d pixels);
+
+/**
+ * Convert pixels_d to int8_t.
+ */
+int8_t px_d_to_i8(pixels_d pixels);
+
+/**
+ * Convert pixels_d to pixels_f.
+ */
+pixels_f px_d_to_px_f(pixels_d pixels);
+
+/**
+ * Convert pixels_d to pixels_t.
+ */
+pixels_t px_d_to_px_t(pixels_d pixels);
+
+/**
+ * Convert pixels_d to pixels_u.
+ */
+pixels_u px_d_to_px_u(pixels_d pixels);
+
+/**
+ * Convert pixels_d to uint16_t.
+ */
+uint16_t px_d_to_u16(pixels_d pixels);
+
+/**
+ * Convert pixels_d to uint32_t.
+ */
+uint32_t px_d_to_u32(pixels_d pixels);
+
+/**
+ * Convert pixels_d to uint64_t.
+ */
+uint64_t px_d_to_u64(pixels_d pixels);
+
+/**
+ * Convert pixels_d to uint8_t.
+ */
+uint8_t px_d_to_u8(pixels_d pixels);
+
+/**
+ * Convert pixels_d to unsigned int.
+ */
+unsigned int px_d_to_u(pixels_d pixels);
+
+/**
+ * Convert pixels_f to double.
+ */
+double px_f_to_d(pixels_f pixels);
+
+/**
+ * Convert pixels_f to float.
+ */
+float px_f_to_f(pixels_f pixels);
+
+/**
+ * Convert pixels_f to int.
+ */
+int px_f_to_i(pixels_f pixels);
+
+/**
+ * Convert pixels_f to int16_t.
+ */
+int16_t px_f_to_i16(pixels_f pixels);
+
+/**
+ * Convert pixels_f to int32_t.
+ */
+int32_t px_f_to_i32(pixels_f pixels);
+
+/**
+ * Convert pixels_f to int64_t.
+ */
+int64_t px_f_to_i64(pixels_f pixels);
+
+/**
+ * Convert pixels_f to int8_t.
+ */
+int8_t px_f_to_i8(pixels_f pixels);
+
+/**
+ * Convert pixels_f to pixels_d.
+ */
+pixels_d px_f_to_px_d(pixels_f pixels);
+
+/**
+ * Convert pixels_f to pixels_t.
+ */
+pixels_t px_f_to_px_t(pixels_f pixels);
+
+/**
+ * Convert pixels_f to pixels_u.
+ */
+pixels_u px_f_to_px_u(pixels_f pixels);
+
+/**
+ * Convert pixels_f to uint16_t.
+ */
+uint16_t px_f_to_u16(pixels_f pixels);
+
+/**
+ * Convert pixels_f to uint32_t.
+ */
+uint32_t px_f_to_u32(pixels_f pixels);
+
+/**
+ * Convert pixels_f to uint64_t.
+ */
+uint64_t px_f_to_u64(pixels_f pixels);
+
+/**
+ * Convert pixels_f to uint8_t.
+ */
+uint8_t px_f_to_u8(pixels_f pixels);
+
+/**
+ * Convert pixels_f to unsigned int.
+ */
+unsigned int px_f_to_u(pixels_f pixels);
+
+/**
+ * Convert pixels_t to double.
+ */
+double px_t_to_d(pixels_t pixels);
+
+/**
+ * Convert pixels_t to float.
+ */
+float px_t_to_f(pixels_t pixels);
+
+/**
+ * Convert pixels_t to int.
+ */
+int px_t_to_i(pixels_t pixels);
+
+/**
+ * Convert pixels_t to int16_t.
+ */
+int16_t px_t_to_i16(pixels_t pixels);
+
+/**
+ * Convert pixels_t to int32_t.
+ */
+int32_t px_t_to_i32(pixels_t pixels);
+
+/**
+ * Convert pixels_t to int64_t.
+ */
+int64_t px_t_to_i64(pixels_t pixels);
+
+/**
+ * Convert pixels_t to int8_t.
+ */
+int8_t px_t_to_i8(pixels_t pixels);
+
+/**
+ * Convert pixels_t to pixels_d.
+ */
+pixels_d px_t_to_px_d(pixels_t pixels);
+
+/**
+ * Convert pixels_t to pixels_f.
+ */
+pixels_f px_t_to_px_f(pixels_t pixels);
+
+/**
+ * Convert pixels_t to pixels_u.
+ */
+pixels_u px_t_to_px_u(pixels_t pixels);
+
+/**
+ * Convert pixels_t to uint16_t.
+ */
+uint16_t px_t_to_u16(pixels_t pixels);
+
+/**
+ * Convert pixels_t to uint32_t.
+ */
+uint32_t px_t_to_u32(pixels_t pixels);
+
+/**
+ * Convert pixels_t to uint64_t.
+ */
+uint64_t px_t_to_u64(pixels_t pixels);
+
+/**
+ * Convert pixels_t to uint8_t.
+ */
+uint8_t px_t_to_u8(pixels_t pixels);
+
+/**
+ * Convert pixels_t to unsigned int.
+ */
+unsigned int px_t_to_u(pixels_t pixels);
+
+/**
+ * Convert pixels_u to double.
+ */
+double px_u_to_d(pixels_u pixels);
+
+/**
+ * Convert pixels_u to float.
+ */
+float px_u_to_f(pixels_u pixels);
+
+/**
+ * Convert pixels_u to int.
+ */
+int px_u_to_i(pixels_u pixels);
+
+/**
+ * Convert pixels_u to int16_t.
+ */
+int16_t px_u_to_i16(pixels_u pixels);
+
+/**
+ * Convert pixels_u to int32_t.
+ */
+int32_t px_u_to_i32(pixels_u pixels);
+
+/**
+ * Convert pixels_u to int64_t.
+ */
+int64_t px_u_to_i64(pixels_u pixels);
+
+/**
+ * Convert pixels_u to int8_t.
+ */
+int8_t px_u_to_i8(pixels_u pixels);
+
+/**
+ * Convert pixels_u to pixels_d.
+ */
+pixels_d px_u_to_px_d(pixels_u pixels);
+
+/**
+ * Convert pixels_u to pixels_f.
+ */
+pixels_f px_u_to_px_f(pixels_u pixels);
+
+/**
+ * Convert pixels_u to pixels_t.
+ */
+pixels_t px_u_to_px_t(pixels_u pixels);
+
+/**
+ * Convert pixels_u to uint16_t.
+ */
+uint16_t px_u_to_u16(pixels_u pixels);
+
+/**
+ * Convert pixels_u to uint32_t.
+ */
+uint32_t px_u_to_u32(pixels_u pixels);
+
+/**
+ * Convert pixels_u to uint64_t.
+ */
+uint64_t px_u_to_u64(pixels_u pixels);
+
+/**
+ * Convert pixels_u to uint8_t.
+ */
+uint8_t px_u_to_u8(pixels_u pixels);
+
+/**
+ * Convert pixels_u to unsigned int.
+ */
+unsigned int px_u_to_u(pixels_u pixels);
+
+/**
+ * Convert uint16_t to pixels_d.
+ */
+pixels_d u16_to_px_d(uint16_t pixels);
+
+/**
+ * Convert uint16_t to pixels_f.
+ */
+pixels_f u16_to_px_f(uint16_t pixels);
+
+/**
+ * Convert uint16_t to pixels_t.
+ */
+pixels_t u16_to_px_t(uint16_t pixels);
+
+/**
+ * Convert uint16_t to pixels_u.
+ */
+pixels_u u16_to_px_u(uint16_t pixels);
+
+/**
+ * Convert uint32_t to pixels_d.
+ */
+pixels_d u32_to_px_d(uint32_t pixels);
+
+/**
+ * Convert uint32_t to pixels_f.
+ */
+pixels_f u32_to_px_f(uint32_t pixels);
+
+/**
+ * Convert uint32_t to pixels_t.
+ */
+pixels_t u32_to_px_t(uint32_t pixels);
+
+/**
+ * Convert uint32_t to pixels_u.
+ */
+pixels_u u32_to_px_u(uint32_t pixels);
+
+/**
+ * Convert uint64_t to pixels_d.
+ */
+pixels_d u64_to_px_d(uint64_t pixels);
+
+/**
+ * Convert uint64_t to pixels_f.
+ */
+pixels_f u64_to_px_f(uint64_t pixels);
+
+/**
+ * Convert uint64_t to pixels_t.
+ */
+pixels_t u64_to_px_t(uint64_t pixels);
+
+/**
+ * Convert uint64_t to pixels_u.
+ */
+pixels_u u64_to_px_u(uint64_t pixels);
+
+/**
+ * Convert uint8_t to pixels_d.
+ */
+pixels_d u8_to_px_d(uint8_t pixels);
+
+/**
+ * Convert uint8_t to pixels_f.
+ */
+pixels_f u8_to_px_f(uint8_t pixels);
+
+/**
+ * Convert uint8_t to pixels_t.
+ */
+pixels_t u8_to_px_t(uint8_t pixels);
+
+/**
+ * Convert uint8_t to pixels_u.
+ */
+pixels_u u8_to_px_u(uint8_t pixels);
+
+/**
+ * Convert unsigned int to pixels_d.
+ */
+pixels_d u_to_px_d(unsigned int pixels);
+
+/**
+ * Convert unsigned int to pixels_f.
+ */
+pixels_f u_to_px_f(unsigned int pixels);
+
+/**
+ * Convert unsigned int to pixels_t.
+ */
+pixels_t u_to_px_t(unsigned int pixels);
+
+/**
+ * Convert unsigned int to pixels_u.
+ */
+pixels_u u_to_px_u(unsigned int pixels);
+
+// Percent Conversion Functions
+
+/**
+ * Convert double to percent_d.
+ */
+percent_d d_to_pct_d(double percent);
+
+/**
+ * Convert double to percent_f.
+ */
+percent_f d_to_pct_f(double percent);
+
+/**
+ * Convert double to percent_t.
+ */
+percent_t d_to_pct_t(double percent);
+
+/**
+ * Convert double to percent_u.
+ */
+percent_u d_to_pct_u(double percent);
+
+/**
+ * Convert float to percent_d.
+ */
+percent_d f_to_pct_d(float percent);
+
+/**
+ * Convert float to percent_f.
+ */
+percent_f f_to_pct_f(float percent);
+
+/**
+ * Convert float to percent_t.
+ */
+percent_t f_to_pct_t(float percent);
+
+/**
+ * Convert float to percent_u.
+ */
+percent_u f_to_pct_u(float percent);
+
+/**
+ * Convert int16_t to percent_d.
+ */
+percent_d i16_to_pct_d(int16_t percent);
+
+/**
+ * Convert int16_t to percent_f.
+ */
+percent_f i16_to_pct_f(int16_t percent);
+
+/**
+ * Convert int16_t to percent_t.
+ */
+percent_t i16_to_pct_t(int16_t percent);
+
+/**
+ * Convert int16_t to percent_u.
+ */
+percent_u i16_to_pct_u(int16_t percent);
+
+/**
+ * Convert int32_t to percent_d.
+ */
+percent_d i32_to_pct_d(int32_t percent);
+
+/**
+ * Convert int32_t to percent_f.
+ */
+percent_f i32_to_pct_f(int32_t percent);
+
+/**
+ * Convert int32_t to percent_t.
+ */
+percent_t i32_to_pct_t(int32_t percent);
+
+/**
+ * Convert int32_t to percent_u.
+ */
+percent_u i32_to_pct_u(int32_t percent);
+
+/**
+ * Convert int64_t to percent_d.
+ */
+percent_d i64_to_pct_d(int64_t percent);
+
+/**
+ * Convert int64_t to percent_f.
+ */
+percent_f i64_to_pct_f(int64_t percent);
+
+/**
+ * Convert int64_t to percent_t.
+ */
+percent_t i64_to_pct_t(int64_t percent);
+
+/**
+ * Convert int64_t to percent_u.
+ */
+percent_u i64_to_pct_u(int64_t percent);
+
+/**
+ * Convert int8_t to percent_d.
+ */
+percent_d i8_to_pct_d(int8_t percent);
+
+/**
+ * Convert int8_t to percent_f.
+ */
+percent_f i8_to_pct_f(int8_t percent);
+
+/**
+ * Convert int8_t to percent_t.
+ */
+percent_t i8_to_pct_t(int8_t percent);
+
+/**
+ * Convert int8_t to percent_u.
+ */
+percent_u i8_to_pct_u(int8_t percent);
+
+/**
+ * Convert int to percent_d.
+ */
+percent_d i_to_pct_d(int percent);
+
+/**
+ * Convert int to percent_f.
+ */
+percent_f i_to_pct_f(int percent);
+
+/**
+ * Convert int to percent_t.
+ */
+percent_t i_to_pct_t(int percent);
+
+/**
+ * Convert int to percent_u.
+ */
+percent_u i_to_pct_u(int percent);
+
+/**
+ * Convert percent_d to double.
+ */
+double pct_d_to_d(percent_d percent);
+
+/**
+ * Convert percent_d to float.
+ */
+float pct_d_to_f(percent_d percent);
+
+/**
+ * Convert percent_d to int.
+ */
+int pct_d_to_i(percent_d percent);
+
+/**
+ * Convert percent_d to int16_t.
+ */
+int16_t pct_d_to_i16(percent_d percent);
+
+/**
+ * Convert percent_d to int32_t.
+ */
+int32_t pct_d_to_i32(percent_d percent);
+
+/**
+ * Convert percent_d to int64_t.
+ */
+int64_t pct_d_to_i64(percent_d percent);
+
+/**
+ * Convert percent_d to int8_t.
+ */
+int8_t pct_d_to_i8(percent_d percent);
+
+/**
+ * Convert percent_d to percent_f.
+ */
+percent_f pct_d_to_pct_f(percent_d percent);
+
+/**
+ * Convert percent_d to percent_t.
+ */
+percent_t pct_d_to_pct_t(percent_d percent);
+
+/**
+ * Convert percent_d to percent_u.
+ */
+percent_u pct_d_to_pct_u(percent_d percent);
+
+/**
+ * Convert percent_d to uint16_t.
+ */
+uint16_t pct_d_to_u16(percent_d percent);
+
+/**
+ * Convert percent_d to uint32_t.
+ */
+uint32_t pct_d_to_u32(percent_d percent);
+
+/**
+ * Convert percent_d to uint64_t.
+ */
+uint64_t pct_d_to_u64(percent_d percent);
+
+/**
+ * Convert percent_d to uint8_t.
+ */
+uint8_t pct_d_to_u8(percent_d percent);
+
+/**
+ * Convert percent_d to unsigned int.
+ */
+unsigned int pct_d_to_u(percent_d percent);
+
+/**
+ * Convert percent_f to double.
+ */
+double pct_f_to_d(percent_f percent);
+
+/**
+ * Convert percent_f to float.
+ */
+float pct_f_to_f(percent_f percent);
+
+/**
+ * Convert percent_f to int.
+ */
+int pct_f_to_i(percent_f percent);
+
+/**
+ * Convert percent_f to int16_t.
+ */
+int16_t pct_f_to_i16(percent_f percent);
+
+/**
+ * Convert percent_f to int32_t.
+ */
+int32_t pct_f_to_i32(percent_f percent);
+
+/**
+ * Convert percent_f to int64_t.
+ */
+int64_t pct_f_to_i64(percent_f percent);
+
+/**
+ * Convert percent_f to int8_t.
+ */
+int8_t pct_f_to_i8(percent_f percent);
+
+/**
+ * Convert percent_f to percent_d.
+ */
+percent_d pct_f_to_pct_d(percent_f percent);
+
+/**
+ * Convert percent_f to percent_t.
+ */
+percent_t pct_f_to_pct_t(percent_f percent);
+
+/**
+ * Convert percent_f to percent_u.
+ */
+percent_u pct_f_to_pct_u(percent_f percent);
+
+/**
+ * Convert percent_f to uint16_t.
+ */
+uint16_t pct_f_to_u16(percent_f percent);
+
+/**
+ * Convert percent_f to uint32_t.
+ */
+uint32_t pct_f_to_u32(percent_f percent);
+
+/**
+ * Convert percent_f to uint64_t.
+ */
+uint64_t pct_f_to_u64(percent_f percent);
+
+/**
+ * Convert percent_f to uint8_t.
+ */
+uint8_t pct_f_to_u8(percent_f percent);
+
+/**
+ * Convert percent_f to unsigned int.
+ */
+unsigned int pct_f_to_u(percent_f percent);
+
+/**
+ * Convert percent_t to double.
+ */
+double pct_t_to_d(percent_t percent);
+
+/**
+ * Convert percent_t to float.
+ */
+float pct_t_to_f(percent_t percent);
+
+/**
+ * Convert percent_t to int.
+ */
+int pct_t_to_i(percent_t percent);
+
+/**
+ * Convert percent_t to int16_t.
+ */
+int16_t pct_t_to_i16(percent_t percent);
+
+/**
+ * Convert percent_t to int32_t.
+ */
+int32_t pct_t_to_i32(percent_t percent);
+
+/**
+ * Convert percent_t to int64_t.
+ */
+int64_t pct_t_to_i64(percent_t percent);
+
+/**
+ * Convert percent_t to int8_t.
+ */
+int8_t pct_t_to_i8(percent_t percent);
+
+/**
+ * Convert percent_t to percent_d.
+ */
+percent_d pct_t_to_pct_d(percent_t percent);
+
+/**
+ * Convert percent_t to percent_f.
+ */
+percent_f pct_t_to_pct_f(percent_t percent);
+
+/**
+ * Convert percent_t to percent_u.
+ */
+percent_u pct_t_to_pct_u(percent_t percent);
+
+/**
+ * Convert percent_t to uint16_t.
+ */
+uint16_t pct_t_to_u16(percent_t percent);
+
+/**
+ * Convert percent_t to uint32_t.
+ */
+uint32_t pct_t_to_u32(percent_t percent);
+
+/**
+ * Convert percent_t to uint64_t.
+ */
+uint64_t pct_t_to_u64(percent_t percent);
+
+/**
+ * Convert percent_t to uint8_t.
+ */
+uint8_t pct_t_to_u8(percent_t percent);
+
+/**
+ * Convert percent_t to unsigned int.
+ */
+unsigned int pct_t_to_u(percent_t percent);
+
+/**
+ * Convert percent_u to double.
+ */
+double pct_u_to_d(percent_u percent);
+
+/**
+ * Convert percent_u to float.
+ */
+float pct_u_to_f(percent_u percent);
+
+/**
+ * Convert percent_u to int.
+ */
+int pct_u_to_i(percent_u percent);
+
+/**
+ * Convert percent_u to int16_t.
+ */
+int16_t pct_u_to_i16(percent_u percent);
+
+/**
+ * Convert percent_u to int32_t.
+ */
+int32_t pct_u_to_i32(percent_u percent);
+
+/**
+ * Convert percent_u to int64_t.
+ */
+int64_t pct_u_to_i64(percent_u percent);
+
+/**
+ * Convert percent_u to int8_t.
+ */
+int8_t pct_u_to_i8(percent_u percent);
+
+/**
+ * Convert percent_u to percent_d.
+ */
+percent_d pct_u_to_pct_d(percent_u percent);
+
+/**
+ * Convert percent_u to percent_f.
+ */
+percent_f pct_u_to_pct_f(percent_u percent);
+
+/**
+ * Convert percent_u to percent_t.
+ */
+percent_t pct_u_to_pct_t(percent_u percent);
+
+/**
+ * Convert percent_u to uint16_t.
+ */
+uint16_t pct_u_to_u16(percent_u percent);
+
+/**
+ * Convert percent_u to uint32_t.
+ */
+uint32_t pct_u_to_u32(percent_u percent);
+
+/**
+ * Convert percent_u to uint64_t.
+ */
+uint64_t pct_u_to_u64(percent_u percent);
+
+/**
+ * Convert percent_u to uint8_t.
+ */
+uint8_t pct_u_to_u8(percent_u percent);
+
+/**
+ * Convert percent_u to unsigned int.
+ */
+unsigned int pct_u_to_u(percent_u percent);
+
+/**
+ * Convert uint16_t to percent_d.
+ */
+percent_d u16_to_pct_d(uint16_t percent);
+
+/**
+ * Convert uint16_t to percent_f.
+ */
+percent_f u16_to_pct_f(uint16_t percent);
+
+/**
+ * Convert uint16_t to percent_t.
+ */
+percent_t u16_to_pct_t(uint16_t percent);
+
+/**
+ * Convert uint16_t to percent_u.
+ */
+percent_u u16_to_pct_u(uint16_t percent);
+
+/**
+ * Convert uint32_t to percent_d.
+ */
+percent_d u32_to_pct_d(uint32_t percent);
+
+/**
+ * Convert uint32_t to percent_f.
+ */
+percent_f u32_to_pct_f(uint32_t percent);
+
+/**
+ * Convert uint32_t to percent_t.
+ */
+percent_t u32_to_pct_t(uint32_t percent);
+
+/**
+ * Convert uint32_t to percent_u.
+ */
+percent_u u32_to_pct_u(uint32_t percent);
+
+/**
+ * Convert uint64_t to percent_d.
+ */
+percent_d u64_to_pct_d(uint64_t percent);
+
+/**
+ * Convert uint64_t to percent_f.
+ */
+percent_f u64_to_pct_f(uint64_t percent);
+
+/**
+ * Convert uint64_t to percent_t.
+ */
+percent_t u64_to_pct_t(uint64_t percent);
+
+/**
+ * Convert uint64_t to percent_u.
+ */
+percent_u u64_to_pct_u(uint64_t percent);
+
+/**
+ * Convert uint8_t to percent_d.
+ */
+percent_d u8_to_pct_d(uint8_t percent);
+
+/**
+ * Convert uint8_t to percent_f.
+ */
+percent_f u8_to_pct_f(uint8_t percent);
+
+/**
+ * Convert uint8_t to percent_t.
+ */
+percent_t u8_to_pct_t(uint8_t percent);
+
+/**
+ * Convert uint8_t to percent_u.
+ */
+percent_u u8_to_pct_u(uint8_t percent);
+
+/**
+ * Convert unsigned int to percent_d.
+ */
+percent_d u_to_pct_d(unsigned int percent);
+
+/**
+ * Convert unsigned int to percent_f.
+ */
+percent_f u_to_pct_f(unsigned int percent);
+
+/**
+ * Convert unsigned int to percent_t.
+ */
+percent_t u_to_pct_t(unsigned int percent);
+
+/**
+ * Convert unsigned int to percent_u.
+ */
+percent_u u_to_pct_u(unsigned int percent);
 
 #ifdef __cplusplus
 };
