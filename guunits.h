@@ -6648,7 +6648,7 @@ percent_t u_to_pct_t(unsigned int percent);
 percent_u u_to_pct_u(unsigned int percent);
 
 #ifdef __cplusplus
-};
+}
 #endif
 
 #endif  /* GUUNITS_H */
