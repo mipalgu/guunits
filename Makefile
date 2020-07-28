@@ -21,6 +21,7 @@ all:	all-real
 generate:
 	cd guunits_generator && swift build
 	./guunits_generator/.build/debug/guunits_generator
+	mv *.swift swift_GUUnits/Sources/GUUnits/
 
 
 .include "../../mk/mipal.mk"
