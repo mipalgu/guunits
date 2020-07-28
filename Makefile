@@ -19,9 +19,12 @@ PKGCONFIG_DESCRIPTION=Simple units library.
 all:	all-real
 
 generate:
-	cd guunits_generator && swift build
-	./guunits_generator/.build/debug/guunits_generator
-	mv *.swift swift_GUUnits/Sources/GUUnits/
+	$Eecho "Generating guunits..."
+	$E[ -f swift_GUUnits/Package.swift ] || (echo "The submodule swift_GUUnits does not exist!" && exit 1); 
+	$Ecd guunits_generator && swift build
+	$E./guunits_generator/.build/debug/guunits_generator
+	$Emv *.swift swift_GUUnits/Sources/GUUnits/
+	$Eecho "Make sure you commit the newly generated files in swift_GUUnits"
 
 
 .include "../../mk/mipal.mk"
