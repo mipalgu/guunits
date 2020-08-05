@@ -153,7 +153,7 @@ int8_t cm_d_to_i8(centimetres_d centimetres)
  */
 metres_d cm_d_to_m_d(centimetres_d centimetres)
 {
-    return ((metres_d) (round(((double) (((centimetres_d) (round(((double) (centimetres))))) / 100.0)))));
+    return ((metres_d) (((centimetres_d) (centimetres)) / 100.0));
 }
 
 /**
@@ -161,7 +161,7 @@ metres_d cm_d_to_m_d(centimetres_d centimetres)
  */
 metres_f cm_d_to_m_f(centimetres_d centimetres)
 {
-    return ((metres_f) (((centimetres_d) (round(((double) (centimetres))))) / 100.0));
+    return ((metres_f) (((centimetres_d) (centimetres)) / 100.0));
 }
 
 /**
@@ -169,7 +169,7 @@ metres_f cm_d_to_m_f(centimetres_d centimetres)
  */
 metres_t cm_d_to_m_t(centimetres_d centimetres)
 {
-    return ((metres_t) (round(((double) (((centimetres_d) (round(((double) (centimetres))))) / 100.0)))));
+    return ((metres_t) (round(((double) (((centimetres_d) (centimetres)) / 100.0)))));
 }
 
 /**
@@ -177,7 +177,7 @@ metres_t cm_d_to_m_t(centimetres_d centimetres)
  */
 metres_u cm_d_to_m_u(centimetres_d centimetres)
 {
-    return ((metres_u) (round(((double) (((centimetres_d) (round(((double) (centimetres))))) / 100.0)))));
+    return ((metres_u) (round(((double) (((centimetres_d) (centimetres)) / 100.0)))));
 }
 
 /**
@@ -185,7 +185,7 @@ metres_u cm_d_to_m_u(centimetres_d centimetres)
  */
 millimetres_d cm_d_to_mm_d(centimetres_d centimetres)
 {
-    return ((millimetres_d) (round(((double) (centimetres * 10.0)))));
+    return ((millimetres_d) (centimetres * 10.0));
 }
 
 /**
@@ -337,7 +337,7 @@ int8_t cm_f_to_i8(centimetres_f centimetres)
  */
 metres_d cm_f_to_m_d(centimetres_f centimetres)
 {
-    return ((metres_d) (round(((double) (((centimetres_d) (centimetres)) / 100.0)))));
+    return ((metres_d) (((centimetres_d) (centimetres)) / 100.0));
 }
 
 /**
@@ -377,7 +377,7 @@ millimetres_d cm_f_to_mm_d(centimetres_f centimetres)
  */
 millimetres_f cm_f_to_mm_f(centimetres_f centimetres)
 {
-    return ((millimetres_f) (round(((double) (centimetres * 10.0f)))));
+    return ((millimetres_f) (centimetres * 10.0f));
 }
 
 /**
@@ -521,7 +521,7 @@ int8_t cm_t_to_i8(centimetres_t centimetres)
  */
 metres_d cm_t_to_m_d(centimetres_t centimetres)
 {
-    return ((metres_d) (round(((double) (((centimetres_d) (centimetres)) / 100.0)))));
+    return ((metres_d) (((centimetres_d) (centimetres)) / 100.0));
 }
 
 /**
@@ -705,7 +705,7 @@ int8_t cm_u_to_i8(centimetres_u centimetres)
  */
 metres_d cm_u_to_m_d(centimetres_u centimetres)
 {
-    return ((metres_d) (round(((double) (((centimetres_d) (centimetres)) / 100.0)))));
+    return ((metres_d) (((centimetres_d) (centimetres)) / 100.0));
 }
 
 /**
@@ -1481,7 +1481,7 @@ millimetres_u i_to_mm_u(int millimetres)
  */
 centimetres_d m_d_to_cm_d(metres_d metres)
 {
-    return ((centimetres_d) (round(((double) (metres * 100.0)))));
+    return ((centimetres_d) (metres * 100.0));
 }
 
 /**
@@ -1593,7 +1593,7 @@ metres_u m_d_to_m_u(metres_d metres)
  */
 millimetres_d m_d_to_mm_d(metres_d metres)
 {
-    return ((millimetres_d) (round(((double) (metres * 1000.0)))));
+    return ((millimetres_d) (metres * 1000.0));
 }
 
 /**
@@ -1673,7 +1673,7 @@ centimetres_d m_f_to_cm_d(metres_f metres)
  */
 centimetres_f m_f_to_cm_f(metres_f metres)
 {
-    return ((centimetres_f) (round(((double) (metres * 100.0f)))));
+    return ((centimetres_f) (metres * 100.0f));
 }
 
 /**
@@ -1785,7 +1785,7 @@ millimetres_d m_f_to_mm_d(metres_f metres)
  */
 millimetres_f m_f_to_mm_f(metres_f metres)
 {
-    return ((millimetres_f) (round(((double) (metres * 1000.0f)))));
+    return ((millimetres_f) (metres * 1000.0f));
 }
 
 /**
@@ -2217,7 +2217,7 @@ unsigned int m_u_to_u(metres_u metres)
  */
 centimetres_d mm_d_to_cm_d(millimetres_d millimetres)
 {
-    return ((centimetres_d) (round(((double) (((millimetres_d) (round(((double) (millimetres))))) / 10.0)))));
+    return ((centimetres_d) (((millimetres_d) (millimetres)) / 10.0));
 }
 
 /**
@@ -2225,7 +2225,7 @@ centimetres_d mm_d_to_cm_d(millimetres_d millimetres)
  */
 centimetres_f mm_d_to_cm_f(millimetres_d millimetres)
 {
-    return ((centimetres_f) (((millimetres_d) (round(((double) (millimetres))))) / 10.0));
+    return ((centimetres_f) (((millimetres_d) (millimetres)) / 10.0));
 }
 
 /**
@@ -2233,7 +2233,7 @@ centimetres_f mm_d_to_cm_f(millimetres_d millimetres)
  */
 centimetres_t mm_d_to_cm_t(millimetres_d millimetres)
 {
-    return ((centimetres_t) (round(((double) (((millimetres_d) (round(((double) (millimetres))))) / 10.0)))));
+    return ((centimetres_t) (round(((double) (((millimetres_d) (millimetres)) / 10.0)))));
 }
 
 /**
@@ -2241,7 +2241,7 @@ centimetres_t mm_d_to_cm_t(millimetres_d millimetres)
  */
 centimetres_u mm_d_to_cm_u(millimetres_d millimetres)
 {
-    return ((centimetres_u) (round(((double) (((millimetres_d) (round(((double) (millimetres))))) / 10.0)))));
+    return ((centimetres_u) (round(((double) (((millimetres_d) (millimetres)) / 10.0)))));
 }
 
 /**
@@ -2305,7 +2305,7 @@ int8_t mm_d_to_i8(millimetres_d millimetres)
  */
 metres_d mm_d_to_m_d(millimetres_d millimetres)
 {
-    return ((metres_d) (round(((double) (((millimetres_d) (round(((double) (millimetres))))) / 1000.0)))));
+    return ((metres_d) (((millimetres_d) (millimetres)) / 1000.0));
 }
 
 /**
@@ -2313,7 +2313,7 @@ metres_d mm_d_to_m_d(millimetres_d millimetres)
  */
 metres_f mm_d_to_m_f(millimetres_d millimetres)
 {
-    return ((metres_f) (((millimetres_d) (round(((double) (millimetres))))) / 1000.0));
+    return ((metres_f) (((millimetres_d) (millimetres)) / 1000.0));
 }
 
 /**
@@ -2321,7 +2321,7 @@ metres_f mm_d_to_m_f(millimetres_d millimetres)
  */
 metres_t mm_d_to_m_t(millimetres_d millimetres)
 {
-    return ((metres_t) (round(((double) (((millimetres_d) (round(((double) (millimetres))))) / 1000.0)))));
+    return ((metres_t) (round(((double) (((millimetres_d) (millimetres)) / 1000.0)))));
 }
 
 /**
@@ -2329,7 +2329,7 @@ metres_t mm_d_to_m_t(millimetres_d millimetres)
  */
 metres_u mm_d_to_m_u(millimetres_d millimetres)
 {
-    return ((metres_u) (round(((double) (((millimetres_d) (round(((double) (millimetres))))) / 1000.0)))));
+    return ((metres_u) (round(((double) (((millimetres_d) (millimetres)) / 1000.0)))));
 }
 
 /**
@@ -2401,7 +2401,7 @@ unsigned int mm_d_to_u(millimetres_d millimetres)
  */
 centimetres_d mm_f_to_cm_d(millimetres_f millimetres)
 {
-    return ((centimetres_d) (round(((double) (((millimetres_d) (millimetres)) / 10.0)))));
+    return ((centimetres_d) (((millimetres_d) (millimetres)) / 10.0));
 }
 
 /**
@@ -2489,7 +2489,7 @@ int8_t mm_f_to_i8(millimetres_f millimetres)
  */
 metres_d mm_f_to_m_d(millimetres_f millimetres)
 {
-    return ((metres_d) (round(((double) (((millimetres_d) (millimetres)) / 1000.0)))));
+    return ((metres_d) (((millimetres_d) (millimetres)) / 1000.0));
 }
 
 /**
@@ -2585,7 +2585,7 @@ unsigned int mm_f_to_u(millimetres_f millimetres)
  */
 centimetres_d mm_t_to_cm_d(millimetres_t millimetres)
 {
-    return ((centimetres_d) (round(((double) (((millimetres_d) (millimetres)) / 10.0)))));
+    return ((centimetres_d) (((millimetres_d) (millimetres)) / 10.0));
 }
 
 /**
@@ -2673,7 +2673,7 @@ int8_t mm_t_to_i8(millimetres_t millimetres)
  */
 metres_d mm_t_to_m_d(millimetres_t millimetres)
 {
-    return ((metres_d) (round(((double) (((millimetres_d) (millimetres)) / 1000.0)))));
+    return ((metres_d) (((millimetres_d) (millimetres)) / 1000.0));
 }
 
 /**
@@ -2769,7 +2769,7 @@ unsigned int mm_t_to_u(millimetres_t millimetres)
  */
 centimetres_d mm_u_to_cm_d(millimetres_u millimetres)
 {
-    return ((centimetres_d) (round(((double) (((millimetres_d) (millimetres)) / 10.0)))));
+    return ((centimetres_d) (((millimetres_d) (millimetres)) / 10.0));
 }
 
 /**
@@ -2857,7 +2857,7 @@ int8_t mm_u_to_i8(millimetres_u millimetres)
  */
 metres_d mm_u_to_m_d(millimetres_u millimetres)
 {
-    return ((metres_d) (round(((double) (((millimetres_d) (millimetres)) / 1000.0)))));
+    return ((metres_d) (((millimetres_d) (millimetres)) / 1000.0));
 }
 
 /**
@@ -4187,7 +4187,7 @@ microseconds_u us_d_to_us_u(microseconds_d microseconds)
  */
 milliseconds_d us_d_to_ms_d(microseconds_d microseconds)
 {
-    return ((milliseconds_d) (round(((double) (((microseconds_d) (round(((double) (microseconds))))) / 1000.0)))));
+    return ((milliseconds_d) (((microseconds_d) (microseconds)) / 1000.0));
 }
 
 /**
@@ -4195,7 +4195,7 @@ milliseconds_d us_d_to_ms_d(microseconds_d microseconds)
  */
 milliseconds_f us_d_to_ms_f(microseconds_d microseconds)
 {
-    return ((milliseconds_f) (((microseconds_d) (round(((double) (microseconds))))) / 1000.0));
+    return ((milliseconds_f) (((microseconds_d) (microseconds)) / 1000.0));
 }
 
 /**
@@ -4203,7 +4203,7 @@ milliseconds_f us_d_to_ms_f(microseconds_d microseconds)
  */
 milliseconds_t us_d_to_ms_t(microseconds_d microseconds)
 {
-    return ((milliseconds_t) (round(((double) (((microseconds_d) (round(((double) (microseconds))))) / 1000.0)))));
+    return ((milliseconds_t) (round(((double) (((microseconds_d) (microseconds)) / 1000.0)))));
 }
 
 /**
@@ -4211,7 +4211,7 @@ milliseconds_t us_d_to_ms_t(microseconds_d microseconds)
  */
 milliseconds_u us_d_to_ms_u(microseconds_d microseconds)
 {
-    return ((milliseconds_u) (round(((double) (((microseconds_d) (round(((double) (microseconds))))) / 1000.0)))));
+    return ((milliseconds_u) (round(((double) (((microseconds_d) (microseconds)) / 1000.0)))));
 }
 
 /**
@@ -4219,7 +4219,7 @@ milliseconds_u us_d_to_ms_u(microseconds_d microseconds)
  */
 seconds_d us_d_to_s_d(microseconds_d microseconds)
 {
-    return ((seconds_d) (round(((double) (((microseconds_d) (round(((double) (microseconds))))) / 1000000.0)))));
+    return ((seconds_d) (((microseconds_d) (microseconds)) / 1000000.0));
 }
 
 /**
@@ -4227,7 +4227,7 @@ seconds_d us_d_to_s_d(microseconds_d microseconds)
  */
 seconds_f us_d_to_s_f(microseconds_d microseconds)
 {
-    return ((seconds_f) (((microseconds_d) (round(((double) (microseconds))))) / 1000000.0));
+    return ((seconds_f) (((microseconds_d) (microseconds)) / 1000000.0));
 }
 
 /**
@@ -4235,7 +4235,7 @@ seconds_f us_d_to_s_f(microseconds_d microseconds)
  */
 seconds_t us_d_to_s_t(microseconds_d microseconds)
 {
-    return ((seconds_t) (round(((double) (((microseconds_d) (round(((double) (microseconds))))) / 1000000.0)))));
+    return ((seconds_t) (round(((double) (((microseconds_d) (microseconds)) / 1000000.0)))));
 }
 
 /**
@@ -4243,7 +4243,7 @@ seconds_t us_d_to_s_t(microseconds_d microseconds)
  */
 seconds_u us_d_to_s_u(microseconds_d microseconds)
 {
-    return ((seconds_u) (round(((double) (((microseconds_d) (round(((double) (microseconds))))) / 1000000.0)))));
+    return ((seconds_u) (round(((double) (((microseconds_d) (microseconds)) / 1000000.0)))));
 }
 
 /**
@@ -4371,7 +4371,7 @@ microseconds_u us_f_to_us_u(microseconds_f microseconds)
  */
 milliseconds_d us_f_to_ms_d(microseconds_f microseconds)
 {
-    return ((milliseconds_d) (round(((double) (((microseconds_d) (microseconds)) / 1000.0)))));
+    return ((milliseconds_d) (((microseconds_d) (microseconds)) / 1000.0));
 }
 
 /**
@@ -4403,7 +4403,7 @@ milliseconds_u us_f_to_ms_u(microseconds_f microseconds)
  */
 seconds_d us_f_to_s_d(microseconds_f microseconds)
 {
-    return ((seconds_d) (round(((double) (((microseconds_d) (microseconds)) / 1000000.0)))));
+    return ((seconds_d) (((microseconds_d) (microseconds)) / 1000000.0));
 }
 
 /**
@@ -4555,7 +4555,7 @@ microseconds_u us_t_to_us_u(microseconds_t microseconds)
  */
 milliseconds_d us_t_to_ms_d(microseconds_t microseconds)
 {
-    return ((milliseconds_d) (round(((double) (((microseconds_d) (microseconds)) / 1000.0)))));
+    return ((milliseconds_d) (((microseconds_d) (microseconds)) / 1000.0));
 }
 
 /**
@@ -4587,7 +4587,7 @@ milliseconds_u us_t_to_ms_u(microseconds_t microseconds)
  */
 seconds_d us_t_to_s_d(microseconds_t microseconds)
 {
-    return ((seconds_d) (round(((double) (((microseconds_d) (microseconds)) / 1000000.0)))));
+    return ((seconds_d) (((microseconds_d) (microseconds)) / 1000000.0));
 }
 
 /**
@@ -4739,7 +4739,7 @@ microseconds_t us_u_to_us_t(microseconds_u microseconds)
  */
 milliseconds_d us_u_to_ms_d(microseconds_u microseconds)
 {
-    return ((milliseconds_d) (round(((double) (((microseconds_d) (microseconds)) / 1000.0)))));
+    return ((milliseconds_d) (((microseconds_d) (microseconds)) / 1000.0));
 }
 
 /**
@@ -4771,7 +4771,7 @@ milliseconds_u us_u_to_ms_u(microseconds_u microseconds)
  */
 seconds_d us_u_to_s_d(microseconds_u microseconds)
 {
-    return ((seconds_d) (round(((double) (((microseconds_d) (microseconds)) / 1000000.0)))));
+    return ((seconds_d) (((microseconds_d) (microseconds)) / 1000000.0));
 }
 
 /**
@@ -4899,7 +4899,7 @@ int8_t ms_d_to_i8(milliseconds_d milliseconds)
  */
 microseconds_d ms_d_to_us_d(milliseconds_d milliseconds)
 {
-    return ((microseconds_d) (round(((double) (milliseconds * 1000.0)))));
+    return ((microseconds_d) (milliseconds * 1000.0));
 }
 
 /**
@@ -4955,7 +4955,7 @@ milliseconds_u ms_d_to_ms_u(milliseconds_d milliseconds)
  */
 seconds_d ms_d_to_s_d(milliseconds_d milliseconds)
 {
-    return ((seconds_d) (round(((double) (((milliseconds_d) (round(((double) (milliseconds))))) / 1000.0)))));
+    return ((seconds_d) (((milliseconds_d) (milliseconds)) / 1000.0));
 }
 
 /**
@@ -4963,7 +4963,7 @@ seconds_d ms_d_to_s_d(milliseconds_d milliseconds)
  */
 seconds_f ms_d_to_s_f(milliseconds_d milliseconds)
 {
-    return ((seconds_f) (((milliseconds_d) (round(((double) (milliseconds))))) / 1000.0));
+    return ((seconds_f) (((milliseconds_d) (milliseconds)) / 1000.0));
 }
 
 /**
@@ -4971,7 +4971,7 @@ seconds_f ms_d_to_s_f(milliseconds_d milliseconds)
  */
 seconds_t ms_d_to_s_t(milliseconds_d milliseconds)
 {
-    return ((seconds_t) (round(((double) (((milliseconds_d) (round(((double) (milliseconds))))) / 1000.0)))));
+    return ((seconds_t) (round(((double) (((milliseconds_d) (milliseconds)) / 1000.0)))));
 }
 
 /**
@@ -4979,7 +4979,7 @@ seconds_t ms_d_to_s_t(milliseconds_d milliseconds)
  */
 seconds_u ms_d_to_s_u(milliseconds_d milliseconds)
 {
-    return ((seconds_u) (round(((double) (((milliseconds_d) (round(((double) (milliseconds))))) / 1000.0)))));
+    return ((seconds_u) (round(((double) (((milliseconds_d) (milliseconds)) / 1000.0)))));
 }
 
 /**
@@ -5091,7 +5091,7 @@ microseconds_d ms_f_to_us_d(milliseconds_f milliseconds)
  */
 microseconds_f ms_f_to_us_f(milliseconds_f milliseconds)
 {
-    return ((microseconds_f) (round(((double) (milliseconds * 1000.0f)))));
+    return ((microseconds_f) (milliseconds * 1000.0f));
 }
 
 /**
@@ -5139,7 +5139,7 @@ milliseconds_u ms_f_to_ms_u(milliseconds_f milliseconds)
  */
 seconds_d ms_f_to_s_d(milliseconds_f milliseconds)
 {
-    return ((seconds_d) (round(((double) (((milliseconds_d) (milliseconds)) / 1000.0)))));
+    return ((seconds_d) (((milliseconds_d) (milliseconds)) / 1000.0));
 }
 
 /**
@@ -5323,7 +5323,7 @@ milliseconds_u ms_t_to_ms_u(milliseconds_t milliseconds)
  */
 seconds_d ms_t_to_s_d(milliseconds_t milliseconds)
 {
-    return ((seconds_d) (round(((double) (((milliseconds_d) (milliseconds)) / 1000.0)))));
+    return ((seconds_d) (((milliseconds_d) (milliseconds)) / 1000.0));
 }
 
 /**
@@ -5507,7 +5507,7 @@ milliseconds_t ms_u_to_ms_t(milliseconds_u milliseconds)
  */
 seconds_d ms_u_to_s_d(milliseconds_u milliseconds)
 {
-    return ((seconds_d) (round(((double) (((milliseconds_d) (milliseconds)) / 1000.0)))));
+    return ((seconds_d) (((milliseconds_d) (milliseconds)) / 1000.0));
 }
 
 /**
@@ -5635,7 +5635,7 @@ int8_t s_d_to_i8(seconds_d seconds)
  */
 microseconds_d s_d_to_us_d(seconds_d seconds)
 {
-    return ((microseconds_d) (round(((double) (seconds * 1000000.0)))));
+    return ((microseconds_d) (seconds * 1000000.0));
 }
 
 /**
@@ -5667,7 +5667,7 @@ microseconds_u s_d_to_us_u(seconds_d seconds)
  */
 milliseconds_d s_d_to_ms_d(seconds_d seconds)
 {
-    return ((milliseconds_d) (round(((double) (seconds * 1000.0)))));
+    return ((milliseconds_d) (seconds * 1000.0));
 }
 
 /**
@@ -5827,7 +5827,7 @@ microseconds_d s_f_to_us_d(seconds_f seconds)
  */
 microseconds_f s_f_to_us_f(seconds_f seconds)
 {
-    return ((microseconds_f) (round(((double) (seconds * 1000000.0f)))));
+    return ((microseconds_f) (seconds * 1000000.0f));
 }
 
 /**
@@ -5859,7 +5859,7 @@ milliseconds_d s_f_to_ms_d(seconds_f seconds)
  */
 milliseconds_f s_f_to_ms_f(seconds_f seconds)
 {
-    return ((milliseconds_f) (round(((double) (seconds * 1000.0f)))));
+    return ((milliseconds_f) (seconds * 1000.0f));
 }
 
 /**
