@@ -1,34 +1,31 @@
 #
-# Makefile
-# Callum McColl, 2019-06-05 11:58
+#	$Id$
 #
-
-ALL_TARGETS=host-local robot-local
-
-C_SRCS!=ls *.c
-CC_SRCS!=ls *.cc
-ALL_HDRS!=ls *.h
-
-.include "../../mk/c++17.mk"
-
-${MODULE_BASE}_HDRS=${ALL_HDRS}
-PKGCONFIG_NAME=guunits
-PKGCONFIG_VERSION=1.0
-PKGCONFIG_DESCRIPTION=Simple units library.
-
-all:	all-real
-
-generate:
-	$Eecho "Generating guunits..."
-	$E[ -f swift_GUUnits/Package.swift ] || (echo "The submodule swift_GUUnits does not exist!" && exit 1); 
-	$Ecd guunits_generator && swift build
-	$E./guunits_generator/.build/debug/guunits_generator
-	$Emv *.swift swift_GUUnits/Sources/GUUnits/
-	$Eecho "Make sure you commit the newly generated files in swift_GUUnits"
-
-
-.include "../../mk/mipal.mk"
-
-
-# vim:ft=make
+# Makefile for pre- and cross-compiling .machine files
 #
+ALL_TARGETS=show-all-dependencies
+NO_DEFAULT_DEPENDENCIES_TARGETS=yes
+
+SRCDIR!=pwd
+
+#DIRS!=find ./ -type d -mindepth 1 -maxdepth 1 -exec basename {} \;
+#hack to avoid SwiftMachines dir for now.
+DIRS?=guunits guunits_generator swift_GUUnits
+
+.ifndef AM_I_JENKINS
+SUBDIRS=
+. for d in ${DIRS}
+.  if exists(${SRCDIR}/$d)
+    SUBDIRS+= ${SRCDIR}/$d
+.  endif
+. endfor
+.endif
+
+.for dir in ${SUBDIRS}
+INC_DIRS+= -I ${dir}
+.endfor
+
+.include "../../mk/subdir.mk"	# comes last!
+
+.include "../../mk/mipal.mk"	# comes last!
+
