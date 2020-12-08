@@ -25,6 +25,9 @@ SUBDIRS=
 INC_DIRS+= -I ${dir}
 .endfor
 
+generate:
+	$Ecd guunits && ${MAKE} generate
+
 .include "../../mk/subdir.mk"	# comes last!
 
 .include "../../mk/mipal.mk"	# comes last!
