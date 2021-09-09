@@ -6,7 +6,6 @@
 ALL_TARGETS=show-all-dependencies
 NO_DEFAULT_DEPENDENCIES_TARGETS=yes
 
-DEPENDS?=gu_util
 
 SUBDIR_NAMES?=guunits guunits_generator swift_GUUnits
 
