@@ -8,7 +8,6 @@ ALL_TARGETS=generate host-local atom-local atom1-local geode-local doc
 DEPENDS?=gu_util
 
 C_SRCS!=ls *.c
-CC_SRCS!=ls *.cc
 ALL_HDRS!=ls *.h
 
 .include "../../../mk/c++17.mk"
