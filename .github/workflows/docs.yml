@@ -13,6 +13,12 @@ jobs:
       - name: Install Ninja
         run: sudo apt install ninja-build
 
+      - name: Clone gu_util
+        uses: actions/checkout@v2
+        with:
+          repository: mipalgu/gu_util
+          path: gu_util
+
       - name: Install gu_util
         run: |
           cd gu_util
