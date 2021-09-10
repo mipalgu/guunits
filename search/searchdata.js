@@ -2,10 +2,11 @@ var indexSectionsWithContent =
 {
   0: "cdefgimprsu",
   1: "ceg",
-  2: "ceg",
+  2: "cegr",
   3: "cdefimprsu",
   4: "cdgmprs",
-  5: "m"
+  5: "m",
+  6: "g"
 };
 
 var indexSectionNames =
@@ -15,7 +16,8 @@ var indexSectionNames =
   2: "files",
   3: "functions",
   4: "typedefs",
-  5: "defines"
+  5: "defines",
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -25,6 +27,7 @@ var indexSectionLabels =
   2: "Files",
   3: "Functions",
   4: "Typedefs",
-  5: "Macros"
+  5: "Macros",
+  6: "Pages"
 };
 
