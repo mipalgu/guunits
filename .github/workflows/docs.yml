@@ -34,6 +34,10 @@ jobs:
           repository: mipalgu/guunits
           path: guunits
 
+      - name: Move README.md
+        run: |
+          cp guunits/README.md guunits/guunits/
+
       - name: Doxygen
         uses: mattnotmitt/doxygen-action@v1.1.0
         with:
