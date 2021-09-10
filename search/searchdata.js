@@ -1,33 +1,30 @@
 var indexSectionsWithContent =
 {
-  0: "cdefgimprsu",
-  1: "ceg",
-  2: "cegr",
-  3: "cdefimprsu",
-  4: "cdgmprs",
-  5: "m",
-  6: "g"
+  0: "cdfgimprsu",
+  1: "gr",
+  2: "cdfimprsu",
+  3: "cdmprs",
+  4: "m",
+  5: "g"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "classes",
-  2: "files",
-  3: "functions",
-  4: "typedefs",
-  5: "defines",
-  6: "pages"
+  1: "files",
+  2: "functions",
+  3: "typedefs",
+  4: "defines",
+  5: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Classes",
-  2: "Files",
-  3: "Functions",
-  4: "Typedefs",
-  5: "Macros",
-  6: "Pages"
+  1: "Files",
+  2: "Functions",
+  3: "Typedefs",
+  4: "Macros",
+  5: "Pages"
 };
 
