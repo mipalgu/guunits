@@ -1,0 +1,10 @@
+prefix=@PC_PREFIX@
+exec_prefix=$${$}{prefix}
+includedir=$${$}{prefix}/include
+libdir=$${$}{exec_prefix}/lib
+
+Name: guunits
+Version: 1.0
+Description: Simple units library.
+Libs:  -L$${$}{libdir} -lguunits
+Cflags:  -I$${$}{includedir} -I$${$}{includedir}/guunits
