@@ -1,4 +1,4 @@
-name: Ubuntu 20.04 Swift CI
+name: Ubuntu 20.04 CI
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Configure
-        run: cd guunits && cmake -G "Unix Makefiles" -B .build
+        run: cd guunits && cmake -B .build
 
       - name: Build
-        run: cd guunits/.build && make
+        run: cd guunits && cmake --build .build
