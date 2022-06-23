@@ -1,0 +1,20 @@
+name: macOS Latest CI
+
+on:
+  push:
+    branches: [development, main]
+
+jobs:
+
+  exec-ci:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      
+      - name: Configure
+        run: cd guunits && cmake -B .build
+
+      - name: Build
+        run: cd guunits && cmake --build .build
