@@ -1,3 +1,6 @@
 [submodule "swift_GUUnits"]
 	path = swift_GUUnits
 	url = https://github.com/mipalgu/swift_GUUnits.git
+[submodule "guunits_generator"]
+	path = guunits_generator
+	url = git@github.com:mipalgu/guunits_generator.git
